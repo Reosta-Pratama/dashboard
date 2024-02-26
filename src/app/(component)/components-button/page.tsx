@@ -1,5 +1,4 @@
-import Card from '@/components/card';
-import { CodeBasicBtn } from '@/components/show code/code-basic-button';
+import BasicBtnCard from '@/components/card/basic-button-card';
 import Title from '@/components/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -15,13 +14,7 @@ const Page = () => {
             <Title name="buttons"></Title>
 
             <div className="grid grid-cols-2 gap-5">
-                {/* Basic Button */}
-                <Card 
-                    title="Example Card">
-                    <div className="p-5">
-                        <CodeBasicBtn isChecked />
-                    </div>
-                </Card>
+                <BasicBtnCard></BasicBtnCard>
             </div>
         </main>
     );

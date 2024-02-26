@@ -2,18 +2,15 @@
 
 import React, { ReactNode, useState } from 'react';
 
-interface CardProps {
+interface BoxCardProps {
   title: string;
   children: ReactNode;
+  isChecked: boolean; 
+  onCheckboxChange: () => void; 
 }
 
-const Card: React.FC<CardProps> = ({ title, children }) => {
+const BoxCard: React.FC<BoxCardProps> = ({ title, children, isChecked, onCheckboxChange }) => {
   const id = title.toLowerCase().replace(/\s+/g, '-');
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
 
   return (
     <div className='bg-white shadow-card rounded-[0.6rem] border border-solid border-[#e2e8f0]'>
@@ -37,7 +34,7 @@ const Card: React.FC<CardProps> = ({ title, children }) => {
             type="checkbox"
             className='hidden'
             checked={isChecked}
-            onChange={handleCheckboxChange}
+            onChange={onCheckboxChange} // Gunakan prop untuk mengubah status checkbox
           />
         </div>
       </div>
@@ -47,4 +44,5 @@ const Card: React.FC<CardProps> = ({ title, children }) => {
   );
 };
 
-export default Card;
+
+export default BoxCard;

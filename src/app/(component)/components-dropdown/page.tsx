@@ -1,4 +1,3 @@
-import Card from '@/components/card';
 import Title from '@/components/title';
 import { Metadata } from 'next';
 import React from 'react'
@@ -14,9 +13,6 @@ const page = () => {
             <Title name="dropdown"></Title>
 
             <div className="grid grid-cols-2 gap-5">
-                <Card title="basic dropdown">
-                    sw
-                </Card>
             </div>
         </main>
     );

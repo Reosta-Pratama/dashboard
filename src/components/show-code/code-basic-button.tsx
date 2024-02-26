@@ -95,7 +95,7 @@ const Code = () => {
                 <span className='text-slate-500 font-medium'>{copied ? 'Copied!' : 'Copy example code'}</span>
             </button>
 
-            <div className="bg-[#f8fafc] w-full overflow-x-scroll rounded-md font-mono">
+            <div className="bg-[#f8fafc]  overflow-x-scroll rounded-md font-mono">
                 <pre className='px-5 py-4'>
                         {
                             buttons.map((item, index) => {
@@ -117,17 +117,14 @@ const Code = () => {
     )
 }
 
-
 interface CodeBasicBtnProps {
-    isChecked: boolean;
+    active: boolean;
 }
 
-export const CodeBasicBtn: React.FC <CodeBasicBtnProps> = ({isChecked}) => {
+export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
   return (
     <>
-        {isChecked ? 'Checked' : 'Not Checked'}
-        {/* <Btn/> */}
-        {/* <Code/> */}
+        {active == false ? <Btn/> : <Code/>}
     </>
   )
 }
