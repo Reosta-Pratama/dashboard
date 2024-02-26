@@ -1,5 +1,5 @@
 import React from 'react'
-import BasicBtn from '../basic-button';
+import BasicBtn from '../style/basic-button';
 
 interface BtnWarningProps {
     title: string;

@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from 'react'
-import BoxCard from './box-card'
-import { CodeBasicBtn } from '../show-code/code-basic-button'
+import BoxCard from '../style/box-card'
+import { CodeBasicBtn } from '../../show-code/button/code-basic-button'
 
-const BasicBtnCard = () => {
+const SizeBtnCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,7 +13,7 @@ const BasicBtnCard = () => {
 
   return (
     <BoxCard 
-        title="basic buttons"
+        title="buttons sizes"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
         <div className="p-5">
@@ -23,4 +23,4 @@ const BasicBtnCard = () => {
   )
 }
 
-export default BasicBtnCard
+export default SizeBtnCard

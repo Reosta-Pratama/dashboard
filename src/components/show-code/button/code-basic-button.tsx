@@ -2,13 +2,44 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { BtnPrimary } from '../button/style/basic-btn-primary';
-import { BtnSecondary } from '../button/style/basic-btn-secondary';
-import { BtnSuccess } from '../button/style/basic-btn-success';
-import { BtnWarning } from '../button/style/basic-btn-warning';
-import { BtnPending } from '../button/style/basic-btn-pending';
-import { BtnDanger } from '../button/style/basic-btn-danger';
-import { BtnDark } from '../button/style/basic-btn-dark';
+import { BtnPrimary } from '../../button/basic/basic-btn-primary';
+import { BtnSecondary } from '../../button/basic/basic-btn-secondary';
+import { BtnSuccess } from '../../button/basic/basic-btn-success';
+import { BtnWarning } from '../../button/basic/basic-btn-warning';
+import { BtnPending } from '../../button/basic/basic-btn-pending';
+import { BtnDanger } from '../../button/basic/basic-btn-danger';
+import { BtnDark } from '../../button/basic/basic-btn-dark';
+
+interface CodeBasicBtnProps {
+    active: boolean;
+}
+
+export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
+  return (
+    <>
+        {active == false 
+            ? 
+            <ul className='flex flex-wrap gap-2'>
+                <li>
+                    <BtnPrimary
+                        title="primary"
+                        addType="button"></BtnPrimary> 
+                </li>
+                <li>
+                    <BtnSecondary
+                        title="Secondary"
+                        addType="button"></BtnSecondary> 
+                </li>
+                <li>
+                    <BtnSuccess
+                        title="success"
+                        addType="button"></BtnSuccess> 
+                </li>
+            </ul>
+            : <Code/>}
+    </>
+  )
+}
 
 const buttons = [
     {
@@ -102,55 +133,4 @@ const Code = () => {
             </div>
         </div>
     )
-}
-
-interface CodeBasicBtnProps {
-    active: boolean;
-}
-
-export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
-  return (
-    <>
-        {active == false 
-            ? 
-            <ul className='flex flex-wrap gap-2'>
-                <li>
-                    <BtnPrimary
-                        title="primary"
-                        addType="button"></BtnPrimary> 
-                </li>
-                <li>
-                    <BtnSecondary
-                        title="Secondary"
-                        addType="button"></BtnSecondary> 
-                </li>
-                <li>
-                    <BtnSuccess
-                        title="success"
-                        addType="button"></BtnSuccess> 
-                </li>
-                <li>
-                    <BtnWarning
-                        title="Warning"
-                        addType="button"></BtnWarning> 
-                </li>
-                <li>
-                    <BtnPending
-                        title="Pending"
-                        addType="button"></BtnPending> 
-                </li>
-                <li>
-                    <BtnDanger
-                        title="Danger"
-                        addType="button"></BtnDanger> 
-                </li>
-                <li>
-                    <BtnDark
-                        title="Dark"
-                        addType="button"></BtnDark> 
-                </li>
-            </ul>
-            : <Code/>}
-    </>
-  )
 }

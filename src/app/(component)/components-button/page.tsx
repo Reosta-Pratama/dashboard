@@ -1,5 +1,6 @@
-import BasicBtnCard from '@/components/card/basic-button-card';
-import OutlineBtnCard from '@/components/card/outline-button-card';
+import BasicBtnCard from '@/components/card/button/basic-button-card';
+import OutlineBtnCard from '@/components/card/button/outline-button-card';
+import SizeBtnCard from '@/components/card/button/sizes-button-card';
 import Title from '@/components/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -15,11 +16,12 @@ const Page = () => {
             <Title name="buttons"></Title>
 
             <div className="grid grid-cols-2 gap-5">
-                <div>
+                <div className='flex flex-col gap-5'>
                     <BasicBtnCard></BasicBtnCard>
+                    <SizeBtnCard></SizeBtnCard>
                 </div>
-                
-                <div>
+
+                <div className='flex flex-col gap-5'>
                     <OutlineBtnCard></OutlineBtnCard>
                 </div>
             </div>

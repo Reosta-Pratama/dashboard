@@ -26,7 +26,7 @@ const config: Config = {
             },
             colors: {
               'primary': '#1e3a8a',
-              'secondary': '#eaeff4',
+              'secondary': '#E2E8F0',
               'success': '#90d12c',
               'warning': '#facc15',
               'pending': '#f97316',
