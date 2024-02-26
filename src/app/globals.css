@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*, ::before, ::after {
+    border-color: #e5e7eb;
+}
+
 body {
     font-family: "Roboto";
     letter-spacing: 0.025em;

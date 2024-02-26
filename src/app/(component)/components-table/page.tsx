@@ -1,3 +1,5 @@
+import BasicTableCard from '@/components/card/table/basic-table';
+import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -8,8 +10,17 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <main>
-            table
+        <main className='flex flex-col gap-5'>
+            <Title name="regular table"></Title>
+
+            <div className="grid grid-cols-2 gap-5">
+                <div className='flex flex-col gap-5'>
+                    <BasicTableCard></BasicTableCard>
+                </div>
+
+                <div className='flex flex-col gap-5'>
+                </div>
+            </div>
         </main>
     );
 }

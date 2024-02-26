@@ -9,6 +9,7 @@ import { LinkBtnWarning } from '@/components/button/link/btn-warning';
 import { LinkBtnPending } from '@/components/button/link/btn-pending';
 import { LinkBtnDanger } from '@/components/button/link/btn-danger';
 import { LinkBtnDark } from '@/components/button/link/btn-dark';
+import { BoxCode } from '../style/box';
 
 interface CodeLinkBtnProps {
     active: boolean;
@@ -133,24 +134,24 @@ const Code = () => {
                 <span className='text-slate-500 font-medium'>{copied ? 'Copied!' : 'Copy example code'}</span>
             </button>
 
-            <div className="bg-[#f8fafc]  overflow-x-scroll rounded-md font-mono">
-                <pre className='px-5 py-4'>
-                        {
-                            buttons.map((item, index) => {
-                                return (
-                                    <code key={index} className='text-xs'>
-                                        &lt;<span className='text-[#22863a]'>a</span> {``}
-                                        <span className='text-[#005cc5]'>href</span>{`="${item.href}" `}
-                                        <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
-                                        {` ${item.title} `}
-                                        &lt;/<span className='text-[#22863a]'>a</span>&gt; 
-                                        <br/>
-                                    </code>
-                                )
-                            })
-                        }
-                </pre>
-            </div>
+            <BoxCode>
+            <pre className='px-5 py-4'>
+                {
+                    buttons.map((item, index) => {
+                        return (
+                            <code key={index} className='text-xs'>
+                                &lt;<span className='text-[#22863a]'>a</span> {``}
+                                <span className='text-[#005cc5]'>href</span>{`="${item.href}" `}
+                                <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
+                                {` ${item.title} `}
+                                &lt;/<span className='text-[#22863a]'>a</span>&gt; 
+                                <br/>
+                            </code>
+                        )
+                    })
+                }
+            </pre>
+            </BoxCode>
         </div>
     )
 }

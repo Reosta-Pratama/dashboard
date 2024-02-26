@@ -6,7 +6,7 @@ import OutlineBtnCard from '@/components/card/button/outline-button-card';
 import RoundedBtnCard from '@/components/card/button/rounded-button-card';
 import SizeBtnCard from '@/components/card/button/sizes-button-card';
 import SoftBtnCard from '@/components/card/button/soft-button-card';
-import Title from '@/components/title';
+import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react';
 

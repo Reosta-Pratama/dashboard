@@ -9,6 +9,7 @@ import { OutlineBtnWarning } from '../../button/outline/outline-btn-warning';
 import { OutlineBtnPending } from '../../button/outline/outline-btn-pending';
 import { OutlineBtnDanger } from '../../button/outline/outline-btn-danger';
 import { OutlineBtnDark } from '../../button/outline/outline-btn-dark';
+import { BoxCode } from '../style/box';
 
 interface CodeOutlineBtnProps {
     active: boolean;
@@ -133,24 +134,24 @@ const Code = () => {
                 <span className='text-slate-500 font-medium'>{copied ? 'Copied!' : 'Copy example code'}</span>
             </button>
 
-            <div className="bg-[#f8fafc]  overflow-x-scroll rounded-md font-mono">
+            <BoxCode>
                 <pre className='px-5 py-4'>
-                        {
-                            buttons.map((item, index) => {
-                                return (
-                                    <code key={index} className='text-xs'>
-                                        &lt;<span className='text-[#22863a]'>button</span> {``}
-                                        <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
-                                        <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
-                                        {` ${item.title} `}
-                                        &lt;/<span className='text-[#22863a]'>button</span>&gt; 
-                                        <br/>
-                                    </code>
-                                )
-                            })
-                        }
+                    {
+                        buttons.map((item, index) => {
+                            return (
+                                <code key={index} className='text-xs'>
+                                    &lt;<span className='text-[#22863a]'>button</span> {``}
+                                    <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
+                                    <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
+                                    {` ${item.title} `}
+                                    &lt;/<span className='text-[#22863a]'>button</span>&gt; 
+                                    <br/>
+                                </code>
+                            )
+                        })
+                    }
                 </pre>
-            </div>
+            </BoxCode>
         </div>
     )
 }

@@ -29,7 +29,7 @@ const ListNav = () => {
 
                 <Navigation
                     name='e-commerce'
-                    href='/e-commerce'
+                    href=''
                     dropdown="yes"
                     droplink={[
                                 ['Categories', '/e-commerce-categories'],
@@ -69,7 +69,7 @@ const ListNav = () => {
 
                 <Divider></Divider>
 
-                <Navigation name = 'crud' href = '/crud' dropdown = "yes"
+                <Navigation name = 'crud' href = '' dropdown = "yes"
                     droplink={[
                         ['data list', '/crud-data-list'],
                         ['form', '/crud-form'],
@@ -85,7 +85,7 @@ const ListNav = () => {
                     <FiUser/>
                 </Navigation>
 
-                <Navigation name='pages' href='/pages' dropdown="yes"
+                <Navigation name='pages' href='' dropdown="yes"
                     droplink={[
                         ['wizards', '/pages-wizards'],
                         ['blog', '/pages-blog'],
@@ -103,7 +103,7 @@ const ListNav = () => {
 
                 <Divider></Divider>
 
-                <Navigation name='components' href='/components' dropdown="yes"
+                <Navigation name='components' href='' dropdown="yes"
                     droplink={[
                         ['table', '/components-table'],
                         ['tabulator', '/components-tabulator'],
@@ -124,7 +124,7 @@ const ListNav = () => {
                     <FiGrid/>
                 </Navigation>
 
-                <Navigation name='forms' href='/forms' dropdown="yes"
+                <Navigation name='forms' href='' dropdown="yes"
                     droplink={[
                         ['regular form', '/forms-regular-form'],
                         ['datepicker', '/forms-datepicker'],
@@ -136,7 +136,7 @@ const ListNav = () => {
                     <FiSidebar/>
                 </Navigation>
 
-                <Navigation name='widgets' href='/widgets' dropdown="yes"
+                <Navigation name='widgets' href='' dropdown="yes"
                     droplink={[
                         ['charts', '/widgets-charts'],
                         ['slider', '/widgets-slider'],
