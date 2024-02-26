@@ -15,9 +15,11 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ name, href, dropdown, droplink, children }) => {
     const [isDropdownOpen, setisDropdownOpen] = useState(false)
+    const [active, setActive] = useState(false);
 
     const toggleDropdown = () => {
         setisDropdownOpen(!isDropdownOpen)
+        setActive(!active);
     }
 
     const iconStyle = {
@@ -30,8 +32,8 @@ const Navigation: React.FC<NavigationProps> = ({ name, href, dropdown, droplink,
         <Link href={href}
             onClick={(e) => {
                 if (dropdown !== undefined) {
-                    e.preventDefault();
-                    toggleDropdown();
+                    e.preventDefault()
+                    toggleDropdown()
                 }
             }}
             className='group relative h-12 flex items-center 
@@ -48,7 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ name, href, dropdown, droplink,
                 duration-300 ease-in-out group-hover:bg-[#ffffff0d]"></div>
         </Link>
 
-        <DropNav data={droplink}></DropNav>
+        <DropNav data={droplink} active={active} />
     </li>
   );
 }

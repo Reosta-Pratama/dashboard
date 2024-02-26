@@ -9,4 +9,14 @@ body {
     letter-spacing: 0.025em;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    color: #475569;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    font-size: 1em;
 }

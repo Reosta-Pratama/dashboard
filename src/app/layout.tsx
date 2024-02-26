@@ -18,13 +18,13 @@ export default function RootLayout({children} : Readonly < {
                         <ListNav></ListNav>
                     </div>
 
-                    <div className="bg-slate-100 flex flex-1 flex-col gap-6
+                    <div className="bg-slate-100 flex flex-1 flex-col gap-8
                         rounded-[30px] px-[22px] pb-10">
                         <div
                             className="h-[67px] flex justify-between items-center
                                 border-b border-slate-200">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-xl font-medium capitalize">welcome reosta</h2>
+                                <h2 className="text-xl text-slate-800 font-medium capitalize">welcome reosta</h2>
                                 <Image src="/img/hand.gif"
                                     alt="Animation hand"
                                     width={24}

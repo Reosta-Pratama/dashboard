@@ -14,7 +14,7 @@ const Logo = () => {
                 width={24}
                 height={24}
                 loading="lazy"></Image>
-            <span className="text-lg text-white capitalize">admin</span>
+            <h1 className="text-lg text-white capitalize">admin</h1>
         </Link>
     )
 }
