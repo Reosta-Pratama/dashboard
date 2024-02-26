@@ -1,22 +1,22 @@
 import React from 'react'
 
-interface SizeBtnProps {
+interface RoundedBtnProps {
     title: string;
     addType: "submit" | "reset" | "button" | undefined;
     addClass?: string | null;
 }
 
-const SizeBtn: React.FC<SizeBtnProps> = ({ title, addType, addClass }) => {
+const RoundedBtn: React.FC<RoundedBtnProps> = ({ title, addType, addClass }) => {
     return (
         <button
             type={addType}
             className={`font-medium capitalize  
-                w-24 flex justify-center rounded-md shadow-sm
-                duration-200 ease-in-out focus:ring-4
+            w-24 flex justify-center rounded-full shadow-sm px-3 py-2 
+            duration-200 ease-in-out focus:ring-4
             ${addClass ?? ''}`}>
             {title}
         </button>
     )
 }
 
-export default SizeBtn
+export default RoundedBtn

@@ -16,7 +16,7 @@ interface CodeOutlineBtnProps {
 
 export const CodeOutlineBtn: React.FC<CodeOutlineBtnProps> = ({active}) => {
   return (
-    <>
+    <div className="p-5">
         {active == false 
             ? 
             <ul className='flex flex-wrap gap-2'>
@@ -57,7 +57,7 @@ export const CodeOutlineBtn: React.FC<CodeOutlineBtnProps> = ({active}) => {
                 </li>
             </ul>
             : <Code/>}
-    </>
+    </div>
   )
 }
 
@@ -141,7 +141,7 @@ const Code = () => {
                                     <code key={index} className='text-xs'>
                                         &lt;<span className='text-[#22863a]'>button</span> {``}
                                         <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
-                                        <span className='text-[#005cc5]'>class</span>{`=font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 "${item.addClass}"`}&gt; 
+                                        <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
                                         {` ${item.title} `}
                                         &lt;/<span className='text-[#22863a]'>button</span>&gt; 
                                         <br/>

@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../style/box-card'
-import { CodeBasicBtn } from '@/components/show-code/button/code-basic-button';
+import { CodeLinkBtn } from '@/components/show-code/button/code-link-button'
 
-const BasicBtnCard = () => {
+const LinkBtnCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const BasicBtnCard = () => {
 
   return (
     <BoxCard 
-        title="basic buttons"
+        title="Working with Links"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeBasicBtn active={isChecked}/>
+        <CodeLinkBtn active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default BasicBtnCard
+export default LinkBtnCard

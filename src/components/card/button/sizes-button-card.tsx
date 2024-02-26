@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../style/box-card'
-import { CodeBasicBtn } from '../../show-code/button/code-basic-button'
+import { CodeSizeBtn } from '@/components/show-code/button/code-size-button'
 
 const SizeBtnCard = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -16,9 +16,7 @@ const SizeBtnCard = () => {
         title="buttons sizes"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <div className="p-5">
-            <CodeBasicBtn active={isChecked}/>
-        </div>
+        <CodeSizeBtn active={isChecked}/>
     </BoxCard>
   )
 }

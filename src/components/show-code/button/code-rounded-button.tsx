@@ -2,58 +2,58 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { BtnPrimary } from '../../button/basic/basic-btn-primary';
-import { BtnSecondary } from '../../button/basic/basic-btn-secondary';
-import { BtnSuccess } from '../../button/basic/basic-btn-success';
-import { BtnWarning } from '../../button/basic/basic-btn-warning';
-import { BtnPending } from '../../button/basic/basic-btn-pending';
-import { BtnDanger } from '../../button/basic/basic-btn-danger';
-import { BtnDark } from '../../button/basic/basic-btn-dark';
+import { RoundedBtnPrimary } from '@/components/button/rounded/rounded-btn-primary';
+import { RoundedBtnSecondary } from '@/components/button/rounded/rounded-btn-secondary';
+import { RoundedBtnSuccess } from '@/components/button/rounded/rounded-btn-success';
+import { RoundedBtnWarning } from '@/components/button/rounded/rounded-btn-warning';
+import { RoundedBtnPending } from '@/components/button/rounded/rounded-btn-pending';
+import { RoundedBtnDanger } from '@/components/button/rounded/rounded-btn-danger';
+import { RoundedBtnDark } from '@/components/button/rounded/rounded-btn-dark';
 
-interface CodeBasicBtnProps {
+interface CodeRoundedBtnProps {
     active: boolean;
 }
 
-export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
+export const CodeRoundedBtn: React.FC<CodeRoundedBtnProps> = ({active}) => {
   return (
     <div className="p-5">
         {active == false 
             ? 
             <ul className='flex flex-wrap gap-2'>
                 <li>
-                    <BtnPrimary
+                    <RoundedBtnPrimary
                         title="primary"
-                        addType="button"></BtnPrimary> 
+                        addType="button"></RoundedBtnPrimary> 
                 </li>
                 <li>
-                    <BtnSecondary
+                    <RoundedBtnSecondary
                         title="Secondary"
-                        addType="button"></BtnSecondary> 
+                        addType="button"></RoundedBtnSecondary> 
                 </li>
                 <li>
-                    <BtnSuccess
+                    <RoundedBtnSuccess
                         title="success"
-                        addType="button"></BtnSuccess> 
+                        addType="button"></RoundedBtnSuccess> 
                 </li>
                 <li>
-                    <BtnWarning
+                    <RoundedBtnWarning
                         title="Warning"
-                        addType="button"></BtnWarning> 
+                        addType="button"></RoundedBtnWarning> 
                 </li>
                 <li>
-                    <BtnPending
+                    <RoundedBtnPending
                         title="Pending"
-                        addType="button"></BtnPending> 
+                        addType="button"></RoundedBtnPending> 
                 </li>
                 <li>
-                    <BtnDanger
+                    <RoundedBtnDanger
                         title="Danger"
-                        addType="button"></BtnDanger> 
+                        addType="button"></RoundedBtnDanger> 
                 </li>
                 <li>
-                    <BtnDark
+                    <RoundedBtnDark
                         title="Dark"
-                        addType="button"></BtnDark> 
+                        addType="button"></RoundedBtnDark> 
                 </li>
             </ul>
             : <Code/>}
@@ -101,7 +101,7 @@ const buttons = [
 
 const buttonsAsString = buttons
   .map((item) => {
-    return `<button type="${item.addType}" class="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"> ${item.title}</button>
+    return `<button type="${item.addType}" class="font-medium capitalize w-24 flex justify-center rounded-full shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"> ${item.title}</button>
 `;
   })
 .join('');
@@ -141,7 +141,7 @@ const Code = () => {
                                     <code key={index} className='text-xs'>
                                         &lt;<span className='text-[#22863a]'>button</span> {``}
                                         <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
-                                        <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
+                                        <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-full shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
                                         {` ${item.title} `}
                                         &lt;/<span className='text-[#22863a]'>button</span>&gt; 
                                         <br/>

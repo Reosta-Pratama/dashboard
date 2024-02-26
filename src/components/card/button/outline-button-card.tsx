@@ -16,9 +16,7 @@ const OutlineBtnCard = () => {
         title="outline buttons"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <div className="p-5">
-            <CodeOutlineBtn active={isChecked}/>
-        </div>
+      <CodeOutlineBtn active={isChecked}/>
     </BoxCard>
   )
 }
