@@ -1,8 +1,14 @@
 "use client"
 
 import React, { useState } from 'react'
-import BasicBtn from '../button/basic-button'
 import { FiFile } from 'react-icons/fi'
+import { BtnPrimary } from '../button/style/basic-btn-primary';
+import { BtnSecondary } from '../button/style/basic-btn-secondary';
+import { BtnSuccess } from '../button/style/basic-btn-success';
+import { BtnWarning } from '../button/style/basic-btn-warning';
+import { BtnPending } from '../button/style/basic-btn-pending';
+import { BtnDanger } from '../button/style/basic-btn-danger';
+import { BtnDark } from '../button/style/basic-btn-dark';
 
 const buttons = [
     {
@@ -41,25 +47,6 @@ const buttons = [
       addClass: 'text-white bg-dark hover:bg-dark/90 focus:ring-dark/20'
     }
 ];
-
-const Btn = () => {
-    return (
-        <ul className='flex flex-wrap items-center gap-2'>
-            {
-                buttons.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <BasicBtn
-                                title={item.title}
-                                addType={item.addType}
-                                addClass={item.addClass}></BasicBtn> 
-                        </li>  
-                    )
-                })
-            }
-        </ul>
-    )
-}
 
 const buttonsAsString = buttons
   .map((item) => {
@@ -124,7 +111,46 @@ interface CodeBasicBtnProps {
 export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
   return (
     <>
-        {active == false ? <Btn/> : <Code/>}
+        {active == false 
+            ? 
+            <ul className='flex flex-wrap gap-2'>
+                <li>
+                    <BtnPrimary
+                        title="primary"
+                        addType="button"></BtnPrimary> 
+                </li>
+                <li>
+                    <BtnSecondary
+                        title="Secondary"
+                        addType="button"></BtnSecondary> 
+                </li>
+                <li>
+                    <BtnSuccess
+                        title="success"
+                        addType="button"></BtnSuccess> 
+                </li>
+                <li>
+                    <BtnWarning
+                        title="Warning"
+                        addType="button"></BtnWarning> 
+                </li>
+                <li>
+                    <BtnPending
+                        title="Pending"
+                        addType="button"></BtnPending> 
+                </li>
+                <li>
+                    <BtnDanger
+                        title="Danger"
+                        addType="button"></BtnDanger> 
+                </li>
+                <li>
+                    <BtnDark
+                        title="Dark"
+                        addType="button"></BtnDark> 
+                </li>
+            </ul>
+            : <Code/>}
     </>
   )
 }

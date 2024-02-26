@@ -1,4 +1,5 @@
 import BasicBtnCard from '@/components/card/basic-button-card';
+import OutlineBtnCard from '@/components/card/outline-button-card';
 import Title from '@/components/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -14,7 +15,13 @@ const Page = () => {
             <Title name="buttons"></Title>
 
             <div className="grid grid-cols-2 gap-5">
-                <BasicBtnCard></BasicBtnCard>
+                <div>
+                    <BasicBtnCard></BasicBtnCard>
+                </div>
+                
+                <div>
+                    <OutlineBtnCard></OutlineBtnCard>
+                </div>
             </div>
         </main>
     );

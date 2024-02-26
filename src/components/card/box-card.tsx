@@ -34,7 +34,7 @@ const BoxCard: React.FC<BoxCardProps> = ({ title, children, isChecked, onCheckbo
             type="checkbox"
             className='hidden'
             checked={isChecked}
-            onChange={onCheckboxChange} // Gunakan prop untuk mengubah status checkbox
+            onChange={onCheckboxChange} 
           />
         </div>
       </div>
