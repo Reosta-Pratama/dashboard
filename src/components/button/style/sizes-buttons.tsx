@@ -11,7 +11,7 @@ const SizeBtn: React.FC<SizeBtnProps> = ({ title, addType, addClass }) => {
         <button
             type={addType}
             className={`font-medium capitalize  
-                w-24 flex justify-center rounded-md shadow-sm
+                flex justify-center rounded-md shadow-sm
                 duration-200 ease-in-out focus:ring-4
             ${addClass ?? ''}`}>
             {title}
