@@ -31,7 +31,7 @@ export const CodeBasicTable: React.FC<CodeBasicTableProps> = ({active}) => {
                 <tbody>
                     {
                       DummyTable.map((user, index) => (
-                        <tr>
+                        <tr key={index + 1}>
                             <BasicTd>{index + 1}</BasicTd>
                             <BasicTd>{user.firstName}</BasicTd>
                             <BasicTd>{user.lastName}</BasicTd>
@@ -55,7 +55,7 @@ export const CodeBasicTable: React.FC<CodeBasicTableProps> = ({active}) => {
                 <tbody>
                     {
                       DummyTable.map((user, index) => (
-                        <tr>
+                        <tr key={index + 1}>
                             <BasicTd addClass="border-slate-600">{index + 1}</BasicTd>
                             <BasicTd addClass="border-slate-600">{user.firstName}</BasicTd>
                             <BasicTd addClass="border-slate-600">{user.lastName}</BasicTd>

@@ -13,51 +13,23 @@ export const BasicDropdown: React.FC<BasicDropdownProps> = ({active}) => {
     <div className="p-5">
         {active == false 
             ? 
-            <div className="flex justify-center"><BtnMedium title="show dropdown" addType='button'></BtnMedium></div>
+            <div className="flex justify-center">
+              <BtnMedium title="show dropdown" addType='button'></BtnMedium>
+            </div>
             : <Code/>}
     </div>
   )
 }
 
-const buttons = [
+const dropdowns = [
     {
       title: 'Primary',
       addType: 'button' as const,
       addClass: 'text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'
-    },
-    {
-      title: 'Secondary',
-      addType: 'button' as const,
-      addClass: 'text-slate-500 bg-secondary hover:bg-secondary/70 focus:ring-secondary'
-    },
-    {
-      title: 'Success',
-      addType: 'button' as const,
-      addClass: 'text-slate-900 bg-success hover:bg-success/90 focus:ring-success/20'
-    },
-    {
-      title: 'Warning',
-      addType: 'button' as const,
-      addClass: 'text-slate-900 bg-warning hover:bg-warning/90 focus:ring-warning/20'
-    },
-    {
-      title: 'Pending',
-      addType: 'button' as const,
-      addClass: 'text-white bg-pending hover:bg-pending/90 focus:ring-pending/20'
-    },
-    {
-      title: 'Danger',
-      addType: 'button' as const,
-      addClass: 'text-white bg-danger hover:bg-danger/90 focus:ring-danger/20'
-    },
-    {
-      title: 'Dark',
-      addType: 'button' as const,
-      addClass: 'text-white bg-dark hover:bg-dark/90 focus:ring-dark/20'
     }
 ];
 
-const buttonsAsString = buttons
+const dropdownsAsString = dropdowns
   .map((item) => {
     return `<button type="${item.addType}" class="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"> ${item.title}</button>
 `;
@@ -70,7 +42,7 @@ const Code = () => {
     const handleCopy = () => {
         navigator
             .clipboard
-            .writeText(buttonsAsString)
+            .writeText(dropdownsAsString)
             .then(() => {
                 setCopied(true);
                 setTimeout(() => {
@@ -94,7 +66,7 @@ const Code = () => {
             <div className="bg-[#f8fafc]  overflow-x-scroll rounded-md font-mono">
                 <pre className='px-5 py-4'>
                         {
-                            buttons.map((item, index) => {
+                            dropdowns.map((item, index) => {
                                 return (
                                     <code key={index} className='text-xs'>
                                         &lt;<span className='text-[#22863a]'>button</span> {``}

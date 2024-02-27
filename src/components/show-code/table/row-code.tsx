@@ -1,65 +1,43 @@
 "use client"
 
+import BasicTable from '@/components/table/basic/table';
+import { BasicTd } from '@/components/table/basic/td';
+import { BasicTh } from '@/components/table/basic/th';
 import { DummyTable } from '@/dummys/dummy-table';
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { BoxCode } from '../style/box';
-import { HeadTh } from '@/components/table/head/th';
-import { HeadTd } from '@/components/table/head/td';
-import BasicTable from '@/components/table/basic/table';
 
-interface CodeHeadTableProps {
+interface CodeRowTableProps {
     active: boolean;
 }
 
-export const CodeHeadTable: React.FC<CodeHeadTableProps> = ({active}) => {
+export const CodeRowTable: React.FC<CodeRowTableProps> = ({active}) => {
   return (
     <div className="p-5">
         {active == false 
             ? 
             <div className="flex flex-col gap-5">
-              {/* Table 1 */}
               <BasicTable>
                 <thead>
                     <tr>
-                        <HeadTh addClass="bg-[#1e293b] text-white">#</HeadTh>
-                        <HeadTh addClass="bg-[#1e293b] text-white">first name</HeadTh>
-                        <HeadTh addClass="bg-[#1e293b] text-white">last name</HeadTh>
-                        <HeadTh addClass="bg-[#1e293b] text-white">username</HeadTh>
+                        <BasicTh>#</BasicTh>
+                        <BasicTh>first name</BasicTh>
+                        <BasicTh>last name</BasicTh>
+                        <BasicTh>username</BasicTh>
                     </tr>
                 </thead>
                 <tbody>
                     {
                       DummyTable.map((user, index) => (
-                        <tr key={index + 1}>
-                            <HeadTd>{index + 1}</HeadTd>
-                            <HeadTd>{user.firstName}</HeadTd>
-                            <HeadTd>{user.lastName}</HeadTd>
-                            <HeadTd>@{user.username}</HeadTd>
-                        </tr>
-                      ))
-                    }
-                </tbody>
-              </BasicTable>
-
-              {/* Table 2 */}
-              <BasicTable>
-                <thead>
-                    <tr>
-                        <HeadTh addClass="bg-[#edf1f6]">#</HeadTh>
-                        <HeadTh addClass="bg-[#edf1f6]">first name</HeadTh>
-                        <HeadTh addClass="bg-[#edf1f6]">last name</HeadTh>
-                        <HeadTh addClass="bg-[#edf1f6]">username</HeadTh>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                      DummyTable.map((user, index) => (
-                        <tr key={index + 1}>
-                            <HeadTd>{index + 1}</HeadTd>
-                            <HeadTd>{user.firstName}</HeadTd>
-                            <HeadTd>{user.lastName}</HeadTd>
-                            <HeadTd>@{user.username}</HeadTd>
+                        <tr key={index + 1} 
+                            className='[&:nth-child(3n+1)]:bg-primary [&:nth-child(3n+1)]:text-white
+                            [&:nth-child(3n+2)]:bg-danger [&:nth-child(3n+2)]:text-white
+                            [&:nth-child(3n+3)]:bg-warning'>
+                            <BasicTd>{index + 1}</BasicTd>
+                            <BasicTd>{user.firstName}</BasicTd>
+                            <BasicTd>{user.lastName}</BasicTd>
+                            <BasicTd>@{user.username}</BasicTd>
                         </tr>
                       ))
                     }
@@ -74,12 +52,7 @@ export const CodeHeadTable: React.FC<CodeHeadTableProps> = ({active}) => {
 const tables = [
     {
       tableClass: '',
-      thClass: 'bg-[#1e293b] text-white',
-      tdClass: ''
-    },
-    {
-      tableClass: '',
-      thClass: 'bg-[#edf1f6]',
+      thClass: '',
       tdClass: ''
     }
 ];
@@ -97,7 +70,10 @@ const tableAsString = tables
           </thead>
           <tbody>
           ${DummyTable.map((user, index) => (
-            `<tr key=${index + 1}>
+            `<tr key=${index + 1}
+                class="[&:nth-child(3n+1)]:bg-primary [&:nth-child(3n+1)]:text-white
+                [&:nth-child(3n+2)]:bg-danger [&:nth-child(3n+2)]:text-white
+                [&:nth-child(3n+3)]:bg-warning">
               <td class="font-medium capitalize px-5 py-3 border-b-2 ${item.tdClass}">${index + 1}</td>
               <td class="font-medium capitalize px-5 py-3 border-b-2 ${item.tdClass}">${user.firstName}</td>
               <td class="font-medium capitalize px-5 py-3 border-b-2 ${item.tdClass}">${user.lastName}</td>
@@ -162,7 +138,9 @@ const Code = () => {
                                           DummyTable.map((user, index) => {
                                             return (
                                               <>
-                                                <br />{` `}  &lt;<span className='text-[#22863a]'>tr</span>
+                                                <br />{` `}  &lt;<span className='text-[#22863a]'>tr</span>{` `}
+                                                <span className='text-[#005cc5]'>class</span>
+                                                {`="[&:nth-child(3n+1)]:bg-primary [&:nth-child(3n+1)]:text-white [&:nth-child(3n+2)]:bg-danger [&:nth-child(3n+2)]:text-white [&:nth-child(3n+3)]:bg-warning"`}&gt;
                                                   <br />{`  `}  &lt;<span className='text-[#22863a]'>td</span>{` `}<span className='text-[#005cc5]'>class</span>{`="px-5 py-3 border-b-2 ${item.tdClass}"`}&gt;{index + 1}&lt;/<span className='text-[#22863a]'>td</span>&gt;
                                                   <br />{`  `}  &lt;<span className='text-[#22863a]'>td</span>{` `}<span className='text-[#005cc5]'>class</span>{`="px-5 py-3 border-b-2 ${item.tdClass}"`}&gt;{user.firstName}&lt;/<span className='text-[#22863a]'>td</span>&gt;
                                                   <br />{`  `}  &lt;<span className='text-[#22863a]'>td</span>{` `}<span className='text-[#005cc5]'>class</span>{`="px-5 py-3 border-b-2 ${item.tdClass}"`}&gt;{user.lastName}&lt;/<span className='text-[#22863a]'>td</span>&gt;

@@ -103,47 +103,59 @@ const ListNav = () => {
 
                 <Divider></Divider>
 
-                <Navigation name='components' href='' dropdown="yes"
+                <Navigation
+                    name='components'
+                    href=''
+                    dropdown="yes"
                     droplink={[
-                        ['table', '/components-table'],
-                        ['tabulator', '/components-tabulator'],
-                        ['modal', '/components-modal'],
-                        ['slide over', '/components-slide-over'],
-                        ['notification', '/components-notification'],
-                        ['tab', '/components-tab'],
                         ['accordion', '/components-accordion'],
-                        ['button', '/components-button'],
                         ['alert', '/components-alert'],
-                        ['progress bar', '/components-progress-bar'],
-                        ['tooltip', '/components-tooltip'],
+                        ['button', '/components-button'],
                         ['dropdown', '/components-dropdown'],
-                        ['typography', '/components-typography'],
                         ['icon', '/components-icon'],
                         ['loading icon', '/components-loading-icon'],
+                        ['modal', '/components-modal'],
+                        ['notification', '/components-notification'],
+                        ['progress bar', '/components-progress-bar'],
+                        ['slide over', '/components-slide-over'],
+                        ['tab', '/components-tab'],
+                        ['tabulator', '/components-tabulator'],
+                        ['table', '/components-table'],
+                        ['tooltip', '/components-tooltip'],
+                        ['typography', '/components-typography'],
                     ]}>
                     <FiGrid/>
                 </Navigation>
 
-                <Navigation name='forms' href='' dropdown="yes"
+
+                <Navigation
+                    name='forms'
+                    href=''
+                    dropdown="yes"
                     droplink={[
-                        ['regular form', '/forms-regular-form'],
                         ['datepicker', '/forms-datepicker'],
-                        ['tom select', '/forms-tom-select'],
                         ['file upload', '/forms-file-upload'],
-                        ['wysiwyg editor', '/forms-wysiwyg-editor'],
+                        ['regular form', '/forms-regular-form'],
+                        ['tom select', '/forms-tom-select'],
                         ['validation', '/forms-validation'],
+                        ['wysiwyg editor', '/forms-wysiwyg-editor'],
                     ]}>
                     <FiSidebar/>
                 </Navigation>
 
-                <Navigation name='widgets' href='' dropdown="yes"
+
+                <Navigation
+                    name='widgets'
+                    href=''
+                    dropdown="yes"
                     droplink={[
                         ['charts', '/widgets-charts'],
-                        ['slider', '/widgets-slider'],
                         ['image zoom', '/widgets-image-zoom'],
+                        ['slider', '/widgets-slider'],
                     ]}>
                     <FiSettings/>
                 </Navigation>
+
             </ul>
         </nav>
     )

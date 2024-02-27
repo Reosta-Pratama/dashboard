@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../style/box-card'
-import { CodeHeadTable } from '@/components/show-code/table/head-code';
+import { CodeSmallTable } from '@/components/show-code/table/small-code';
 
-const HeadTableCard = () => {
+const SmallTableCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const HeadTableCard = () => {
 
   return (
     <BoxCard 
-        title="table head options"
+        title="small table"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeHeadTable active={isChecked}/>
+        <CodeSmallTable active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default HeadTableCard
+export default SmallTableCard

@@ -1,4 +1,4 @@
-import BoxBasicDropdown from '@/components/dropdown/box/basic';
+import BoxBasicDropdown from '@/components/card/dropdown/basic-card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'

@@ -1,4 +1,11 @@
 import BasicTableCard from '@/components/card/table/basic-table';
+import BorderTableCard from '@/components/card/table/border-table';
+import HeadTableCard from '@/components/card/table/head-table';
+import HoverTableCard from '@/components/card/table/hover-table';
+import ResponsiveTableCard from '@/components/card/table/responsive-table';
+import RowTableCard from '@/components/card/table/row-table';
+import SmallTableCard from '@/components/card/table/small-table';
+import StripedTableCard from '@/components/card/table/striped-table';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'
@@ -16,9 +23,16 @@ const page = () => {
             <div className="grid grid-cols-2 gap-5">
                 <div className='flex flex-col gap-5'>
                     <BasicTableCard></BasicTableCard>
+                    <BorderTableCard></BorderTableCard>
+                    <HoverTableCard></HoverTableCard>
+                    <RowTableCard></RowTableCard>
                 </div>
 
                 <div className='flex flex-col gap-5'>
+                    <HeadTableCard></HeadTableCard>
+                    <ResponsiveTableCard></ResponsiveTableCard>
+                    <SmallTableCard></SmallTableCard>
+                    <StripedTableCard></StripedTableCard>
                 </div>
             </div>
         </main>

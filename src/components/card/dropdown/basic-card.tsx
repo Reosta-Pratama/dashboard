@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from 'react'
-import BoxCard from '../style/box-card'
-import { CodeHeadTable } from '@/components/show-code/table/head-code';
+import BoxCard from '@/components/card/style/box-card';
+import { BasicDropdown } from '../../show-code/dropdown/basic-code';
 
-const HeadTableCard = () => {
+const BoxBasicDropdown = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const HeadTableCard = () => {
 
   return (
     <BoxCard 
-        title="table head options"
+        title="basic dropdown"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeHeadTable active={isChecked}/>
+        <BasicDropdown active={isChecked}></BasicDropdown>
     </BoxCard>
   )
 }
 
-export default HeadTableCard
+export default BoxBasicDropdown

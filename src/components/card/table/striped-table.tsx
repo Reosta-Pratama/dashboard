@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from 'react'
-import BoxCard from '@/components/card/style/box-card';
-import { BasicDropdown } from '../style/basic';
+import BoxCard from '../style/box-card'
+import { CodeStripedTable } from '@/components/show-code/table/striped-code';
 
-const BoxBasicDropdown = () => {
+const StripedTableCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const BoxBasicDropdown = () => {
 
   return (
     <BoxCard 
-        title="basic dropdown"
+        title="Striped Rows"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <BasicDropdown active={isChecked}></BasicDropdown>
+        <CodeStripedTable active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default BoxBasicDropdown
+export default StripedTableCard
