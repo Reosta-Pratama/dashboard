@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import BoxCard from '@/components/card/style/box-card';
 import { BasicDropdown } from '../../show-code/dropdown/basic-code';
 
-const BoxBasicDropdown = () => {
+const CardBasicDropdown = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -21,4 +21,4 @@ const BoxBasicDropdown = () => {
   )
 }
 
-export default BoxBasicDropdown
+export default CardBasicDropdown

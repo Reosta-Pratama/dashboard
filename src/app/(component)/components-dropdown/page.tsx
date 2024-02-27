@@ -1,4 +1,4 @@
-import BoxBasicDropdown from '@/components/card/dropdown/basic-card';
+import CardBasicDropdown from '@/components/card/dropdown/basic-card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'
@@ -15,7 +15,7 @@ const page = () => {
 
             <div className="grid grid-cols-2 gap-5">
                 <div className='flex flex-col gap-5'>
-                    <BoxBasicDropdown></BoxBasicDropdown>
+                    <CardBasicDropdown></CardBasicDropdown>
                 </div>
 
                 <div className='flex flex-col gap-5'>

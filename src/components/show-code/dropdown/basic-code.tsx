@@ -3,19 +3,44 @@
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { BtnMedium } from '@/components/button/sizes/mediumBtn';
+import { BoxDropdown } from '@/components/dropdown/style/box';
+import { Dropdown } from '@/components/dropdown/basic/basic';
+import { ChildDropdown } from '@/components/dropdown/basic/children';
 
 interface BasicDropdownProps {
     active: boolean;
 }
 
 export const BasicDropdown: React.FC<BasicDropdownProps> = ({active}) => {
+    const [isActive, setIsActive] = useState(false);
+    const toggleDropdown = () => {
+        setIsActive(!isActive);
+    };
+
   return (
     <div className="p-5">
         {active == false 
             ? 
-            <div className="flex justify-center">
-              <BtnMedium title="show dropdown" addType='button'></BtnMedium>
-            </div>
+            <BoxDropdown>
+                <BtnMedium 
+                    title="show dropdown" 
+                    addType='button' 
+                    func={toggleDropdown}>
+                </BtnMedium>
+
+                <Dropdown isActive={isActive}>
+                    <ChildDropdown 
+                        title='new dropdown' 
+                        href=''
+                        toggleDropdown={toggleDropdown}>
+                    </ChildDropdown>
+                    <ChildDropdown 
+                        title='delete dropdown' 
+                        href=''
+                        toggleDropdown={toggleDropdown}>
+                    </ChildDropdown>
+                </Dropdown>
+            </BoxDropdown>
             : <Code/>}
     </div>
   )

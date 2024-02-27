@@ -4,12 +4,14 @@ interface OnlyIconBtnProps {
     addType: "submit" | "reset" | "button" | undefined;
     addClass?: string | null;
     children: ReactNode;
+    onclick?: () => void;
 }
 
-const OnlyIconBtn: React.FC<OnlyIconBtnProps> = ({ addType, addClass, children }) => {
+const OnlyIconBtn: React.FC<OnlyIconBtnProps> = ({ addType, addClass, children, onclick }) => {
     return (
         <button
             type={addType}
+            onClick={onclick}
             className={`text-xl font-medium capitalize  
             flex justify-center rounded-md shadow-sm px-3 py-2 
             duration-200 ease-in-out focus:ring-4
