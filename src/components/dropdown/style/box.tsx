@@ -6,8 +6,10 @@ interface BoxDropdownProps {
 
 export const BoxDropdown: React.FC<BoxDropdownProps> = ({children}) => {
   return (
-      <div className="flex justify-center">
+    <div className="flex justify-center">
+      <div className="relative">
         {children}
       </div>
+    </div>
   )
 }

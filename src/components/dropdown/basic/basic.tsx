@@ -8,8 +8,8 @@ interface DropdownProps{
 
 export const Dropdown: React.FC<DropdownProps> = ({placement, isActive, children}) => {
   return (
-    <div className={`absolute inset-0 w-fit 
-        ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'}
+    <div className={`absolute top-0 right-0 w-fit 
+        ${isActive ? 'translate-y-10 opacity-100 visible' : 'translate-y-20 opacity-0 invisible'}
         transition-all duration-300 ease-in-out`}>
         <ul className="bg-white w-full flex flex-col shadow rounded-md gap-2 p-2">
             {children}
