@@ -1,5 +1,5 @@
 import React from 'react'
-import SoftBtn from '../../style/soft-button';
+import SoftBtn from '../box';
 
 interface SoftBtnPendingProps {
     title: string;

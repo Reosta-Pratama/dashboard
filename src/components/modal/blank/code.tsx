@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { ModalBlank } from './components/box';
-import { BtnPrimary } from '@/components/button/basic/style/basic-btn-primary';
+import { BtnPrimary } from '@/components/button/basic/style/btn-primary';
 import { useModal } from '../toggle';
 import { ValueModalBlank } from './components/value';
 

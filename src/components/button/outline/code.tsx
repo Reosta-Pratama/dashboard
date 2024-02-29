@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { OutlineBtnPrimary } from './style/outline-btn-primary';
-import { OutlineBtnSecondary } from './style/outline-btn-secondary';
-import { OutlineBtnSuccess } from './style/outline-btn-success';
-import { OutlineBtnWarning } from './style/outline-btn-warning';
-import { OutlineBtnPending } from './style/outline-btn-pending';
-import { OutlineBtnDanger } from './style/outline-btn-danger';
-import { OutlineBtnDark } from './style/outline-btn-dark';
+import { OutlineBtnPrimary } from './style/btn-primary';
+import { OutlineBtnSecondary } from './style/btn-secondary';
+import { OutlineBtnSuccess } from './style/btn-success';
+import { OutlineBtnWarning } from './style/btn-warning';
+import { OutlineBtnPending } from './style/btn-pending';
+import { OutlineBtnDanger } from './style/btn-danger';
+import { OutlineBtnDark } from './style/btn-dark';
 import { BoxCode } from '../../show-code/box';
 
 interface CodeOutlineBtnProps {
@@ -24,37 +24,44 @@ export const CodeOutlineBtn: React.FC<CodeOutlineBtnProps> = ({active}) => {
                 <li>
                     <OutlineBtnPrimary
                         title="primary"
-                        addType="button"></OutlineBtnPrimary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnPrimary> 
                 </li>
                 <li>
                     <OutlineBtnSecondary
                         title="Secondary"
-                        addType="button"></OutlineBtnSecondary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnSecondary> 
                 </li>
                 <li>
                     <OutlineBtnSuccess
                         title="success"
-                        addType="button"></OutlineBtnSuccess> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnSuccess> 
                 </li>
                 <li>
                     <OutlineBtnWarning
                         title="Warning"
-                        addType="button"></OutlineBtnWarning> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnWarning> 
                 </li>
                 <li>
                     <OutlineBtnPending
                         title="Pending"
-                        addType="button"></OutlineBtnPending> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnPending> 
                 </li>
                 <li>
                     <OutlineBtnDanger
                         title="Danger"
-                        addType="button"></OutlineBtnDanger> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnDanger> 
                 </li>
                 <li>
                     <OutlineBtnDark
                         title="Dark"
-                        addType="button"></OutlineBtnDark> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></OutlineBtnDark> 
                 </li>
             </ul>
             : <Code/>}

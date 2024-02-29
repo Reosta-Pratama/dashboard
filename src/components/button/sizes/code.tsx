@@ -21,17 +21,20 @@ export const CodeSizeBtn: React.FC<CodeSizeBtnProps> = ({active}) => {
                     <li>
                         <BtnSmall
                             title="small"
-                            addType="button"></BtnSmall> 
+                            addType="button"
+                            addClass='min-w-24'></BtnSmall> 
                     </li>
                     <li>
                         <BtnMedium
                             title="medium"
-                            addType="button"></BtnMedium> 
+                            addType="button"
+                            addClass='min-w-24'></BtnMedium> 
                     </li>
                     <li>
                         <BtnLarge
                             title="large"
-                            addType="button"></BtnLarge> 
+                            addType="button"
+                            addClass='min-w-24'></BtnLarge> 
                     </li>
                 </ul>
             </div>

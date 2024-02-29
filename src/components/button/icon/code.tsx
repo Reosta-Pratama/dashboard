@@ -24,49 +24,56 @@ export const CodeIconBtn: React.FC<CodeIconBtnProps> = ({active}) => {
                 <li>
                     <IconBtnPrimary
                         title="primary"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiActivity />
                     </IconBtnPrimary> 
                 </li>
                 <li>
                     <IconBtnSecondary
                         title="Secondary"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiAirplay />
                     </IconBtnSecondary> 
                 </li>
                 <li>
                     <IconBtnSuccess
                         title="success"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiAlertCircle />
                     </IconBtnSuccess> 
                 </li>
                 <li>
                     <IconBtnWarning
                         title="Warning"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiAnchor />
                     </IconBtnWarning> 
                 </li>
                 <li>
                     <IconBtnPending
                         title="Pending"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiAperture />
                     </IconBtnPending> 
                 </li>
                 <li>
                     <IconBtnDanger
                         title="Danger"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiArchive />
                     </IconBtnDanger> 
                 </li>
                 <li>
                     <IconBtnDark
                         title="Dark"
-                        addType="button">
+                        addType="button"
+                        addClass='min-w-24 px-3 py-2'>
                             <FiBook />
                     </IconBtnDark> 
                 </li>

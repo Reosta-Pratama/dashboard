@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { RoundedBtnPrimary } from '@/components/button/rounded/style/rounded-btn-primary';
-import { RoundedBtnSecondary } from '@/components/button/rounded/style/rounded-btn-secondary';
-import { RoundedBtnSuccess } from '@/components/button/rounded/style/rounded-btn-success';
-import { RoundedBtnWarning } from '@/components/button/rounded/style/rounded-btn-warning';
-import { RoundedBtnPending } from '@/components/button/rounded/style/rounded-btn-pending';
-import { RoundedBtnDanger } from '@/components/button/rounded/style/rounded-btn-danger';
-import { RoundedBtnDark } from '@/components/button/rounded/style/rounded-btn-dark';
+import { RoundedBtnPrimary } from '@/components/button/rounded/style/btn-primary';
+import { RoundedBtnSecondary } from '@/components/button/rounded/style/btn-secondary';
+import { RoundedBtnSuccess } from '@/components/button/rounded/style/btn-success';
+import { RoundedBtnWarning } from '@/components/button/rounded/style/btn-warning';
+import { RoundedBtnPending } from '@/components/button/rounded/style/btn-pending';
+import { RoundedBtnDanger } from '@/components/button/rounded/style/btn-danger';
+import { RoundedBtnDark } from '@/components/button/rounded/style/btn-dark';
 import { BoxCode } from '../../show-code/box';
 
 interface CodeRoundedBtnProps {

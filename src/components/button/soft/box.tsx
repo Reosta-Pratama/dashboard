@@ -13,7 +13,7 @@ const SoftBtn: React.FC<SoftBtnProps> = ({ title, addType, addClass, onclick }) 
             type={addType}
             onClick={onclick}
             className={`font-medium capitalize  
-            min-w-24 flex justify-center rounded-full shadow-sm px-3 py-2
+            flex justify-center rounded-full shadow-sm
             border border-solid 
             duration-200 ease-in-out focus:ring-4
             ${addClass ?? ''}`}>

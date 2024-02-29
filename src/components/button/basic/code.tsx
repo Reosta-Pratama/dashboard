@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { BtnPrimary } from './style/basic-btn-primary';
-import { BtnSecondary } from './style/basic-btn-secondary';
-import { BtnSuccess } from './style/basic-btn-success';
-import { BtnWarning } from './style/basic-btn-warning';
-import { BtnPending } from './style/basic-btn-pending';
-import { BtnDanger } from './style/basic-btn-danger';
-import { BtnDark } from './style/basic-btn-dark';
+import { BtnPrimary } from './style/btn-primary';
+import { BtnSecondary } from './style/btn-secondary';
+import { BtnSuccess } from './style/btn-success';
+import { BtnWarning } from './style/btn-warning';
+import { BtnPending } from './style/btn-pending';
+import { BtnDanger } from './style/btn-danger';
+import { BtnDark } from './style/btn-dark';
 import { BoxCode } from '../../show-code/box';
 
 interface CodeBasicBtnProps {
@@ -24,37 +24,44 @@ export const CodeBasicBtn: React.FC<CodeBasicBtnProps> = ({active}) => {
                 <li>
                     <BtnPrimary
                         title="primary"
-                        addType="button"></BtnPrimary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnPrimary> 
                 </li>
                 <li>
                     <BtnSecondary
                         title="Secondary"
-                        addType="button"></BtnSecondary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnSecondary> 
                 </li>
                 <li>
                     <BtnSuccess
                         title="success"
-                        addType="button"></BtnSuccess> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnSuccess> 
                 </li>
                 <li>
                     <BtnWarning
                         title="Warning"
-                        addType="button"></BtnWarning> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnWarning> 
                 </li>
                 <li>
                     <BtnPending
                         title="Pending"
-                        addType="button"></BtnPending> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnPending> 
                 </li>
                 <li>
                     <BtnDanger
                         title="Danger"
-                        addType="button"></BtnDanger> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnDanger> 
                 </li>
                 <li>
                     <BtnDark
                         title="Dark"
-                        addType="button"></BtnDark> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></BtnDark> 
                 </li>
             </ul>
             : <Code/>}

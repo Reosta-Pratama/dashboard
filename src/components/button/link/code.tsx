@@ -24,37 +24,44 @@ export const CodeLinkBtn: React.FC<CodeLinkBtnProps> = ({active}) => {
                 <li>
                     <LinkBtnPrimary
                         title="link"
-                        href=""></LinkBtnPrimary> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnPrimary> 
                 </li>
                 <li>
                     <LinkBtnSecondary
                         title="button"
-                        href=""></LinkBtnSecondary> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnSecondary> 
                 </li>
                 <li>
                     <LinkBtnSuccess
                         title="input"
-                        href=""></LinkBtnSuccess> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnSuccess> 
                 </li>
                 <li>
                     <LinkBtnWarning
                         title="submit"
-                        href=""></LinkBtnWarning> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnWarning> 
                 </li>
                 <li>
                     <LinkBtnPending
                         title="Pending"
-                        href=""></LinkBtnPending> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnPending> 
                 </li>
                 <li>
                     <LinkBtnDanger
                         title="reset"
-                        href=""></LinkBtnDanger> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnDanger> 
                 </li>
                 <li>
                     <LinkBtnDark
                         title="metal"
-                        href=""></LinkBtnDark> 
+                        href=""
+                        addClass='min-w-24 px-3 py-2'></LinkBtnDark> 
                 </li>
             </ul>
             : <Code/>}

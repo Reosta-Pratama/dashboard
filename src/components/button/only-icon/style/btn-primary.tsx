@@ -1,5 +1,5 @@
 import React, { Children, ReactNode } from 'react'
-import OnlyIconBtn from '../../style/only-icon-button';
+import OnlyIconBtn from '../box';
 
 interface OnlyIconBtnPrimaryProps {
     addType: "submit" | "reset" | "button" | undefined;
