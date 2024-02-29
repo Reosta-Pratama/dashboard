@@ -9,7 +9,7 @@ import { OnlyIconBtnWarning } from '@/components/button/only-icon/style/btn-warn
 import { OnlyIconBtnPending } from '@/components/button/only-icon/style/btn-pending';
 import { OnlyIconBtnDanger } from '@/components/button/only-icon/style/btn-danger';
 import { OnlyIconBtnDark } from '@/components/button/only-icon/style/btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeOnlyIconBtnProps {
     active: boolean;

@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../../card/box-card'
-import { CodeSoftBtn } from '@/components/button/soft/code';
+import { CodeRowTable } from '@/components/table/row/code';
 
-const SoftBtnCard = () => {
+const RowTableCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const SoftBtnCard = () => {
 
   return (
     <BoxCard 
-        title="Soft Color Buttons"
+        title="Table Row States"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeSoftBtn active={isChecked}/>
+        <CodeRowTable active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default SoftBtnCard
+export default RowTableCard

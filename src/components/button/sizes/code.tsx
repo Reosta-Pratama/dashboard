@@ -5,7 +5,7 @@ import { FiFile } from 'react-icons/fi'
 import { BtnSmall } from '@/components/button/sizes/style/smallBtn';
 import { BtnMedium } from '@/components/button/sizes/style/mediumBtn';
 import { BtnLarge } from '@/components/button/sizes/style/largeBtn';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeSizeBtnProps {
     active: boolean;

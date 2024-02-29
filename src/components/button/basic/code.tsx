@@ -9,7 +9,7 @@ import { BtnWarning } from './style/basic-btn-warning';
 import { BtnPending } from './style/basic-btn-pending';
 import { BtnDanger } from './style/basic-btn-danger';
 import { BtnDark } from './style/basic-btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeBasicBtnProps {
     active: boolean;

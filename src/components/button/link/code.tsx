@@ -9,7 +9,7 @@ import { LinkBtnWarning } from '@/components/button/link/style/btn-warning';
 import { LinkBtnPending } from '@/components/button/link/style/btn-pending';
 import { LinkBtnDanger } from '@/components/button/link/style/btn-danger';
 import { LinkBtnDark } from '@/components/button/link/style/btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeLinkBtnProps {
     active: boolean;

@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../../card/box-card'
-import { CodeSoftBtn } from '@/components/button/soft/code';
+import { CodeResponsiveTable } from '@/components/table/responsive/code';
 
-const SoftBtnCard = () => {
+const ResponsiveTableCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const SoftBtnCard = () => {
 
   return (
     <BoxCard 
-        title="Soft Color Buttons"
+        title="Responsive table"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeSoftBtn active={isChecked}/>
+        <CodeResponsiveTable active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default SoftBtnCard
+export default ResponsiveTableCard

@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '../../card/box-card'
-import { CodeSoftBtn } from '@/components/button/soft/code';
+import { CodeBasicAccordion } from '@/components/accordion/basic/code';
 
-const SoftBtnCard = () => {
+const BasicAccordionCard = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const SoftBtnCard = () => {
 
   return (
     <BoxCard 
-        title="Soft Color Buttons"
+        title="basic accordion"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeSoftBtn active={isChecked}/>
+        <CodeBasicAccordion active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default SoftBtnCard
+export default BasicAccordionCard

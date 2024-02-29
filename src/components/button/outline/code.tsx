@@ -9,7 +9,7 @@ import { OutlineBtnWarning } from './style/outline-btn-warning';
 import { OutlineBtnPending } from './style/outline-btn-pending';
 import { OutlineBtnDanger } from './style/outline-btn-danger';
 import { OutlineBtnDark } from './style/outline-btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeOutlineBtnProps {
     active: boolean;

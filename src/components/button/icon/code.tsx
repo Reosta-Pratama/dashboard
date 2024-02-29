@@ -9,7 +9,7 @@ import { IconBtnWarning } from '@/components/button/icon/style/btn-warning';
 import { IconBtnPending } from '@/components/button/icon/style/btn-pending';
 import { IconBtnDanger } from '@/components/button/icon/style/btn-danger';
 import { IconBtnDark } from '@/components/button/icon/style/btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeIconBtnProps {
     active: boolean;

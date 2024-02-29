@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import BoxCard from '../../card/style/box-card'
+import BoxCard from '../../card/box-card'
 import { CodeOnlyIconBtn } from '@/components/button/only-icon/code';
 
 const OnlyIconBtnCard = () => {

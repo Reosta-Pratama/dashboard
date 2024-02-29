@@ -1,8 +1,8 @@
-import CardBasicDropdown from '@/components/card/dropdown/basic-card';
-import CardHeadFootDropdown from '@/components/card/dropdown/header-footer-card';
-import CardHeadIconDropdown from '@/components/card/dropdown/header-icon';
-import CardIconDropdown from '@/components/card/dropdown/icon-card';
-import CardScrollDropdown from '@/components/card/dropdown/scrolled-card';
+import CardBasicDropdown from '@/components/dropdown/basic/card';
+import CardHeadFootDropdown from '@/components/dropdown/header-footer/card';
+import CardHeadIconDropdown from '@/components/dropdown/header-icon/card';
+import CardIconDropdown from '@/components/dropdown/icon/card';
+import CardScrollDropdown from '@/components/dropdown/scroll/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'

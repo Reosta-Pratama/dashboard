@@ -1,4 +1,4 @@
-import BasicAccordionCard from '@/components/card/accordion/basic-card';
+import BasicAccordionCard from '@/components/accordion/basic/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'

@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState } from 'react'
-import BoxCard from '../../card/box-card'
-import { CodeSoftBtn } from '@/components/button/soft/code';
+import BoxCard from '@/components/card/box-card';
+import { BasicDropdownCode } from './code';
 
-const SoftBtnCard = () => {
+const CardBasicDropdown = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const SoftBtnCard = () => {
 
   return (
     <BoxCard 
-        title="Soft Color Buttons"
+        title="basic dropdown"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeSoftBtn active={isChecked}/>
+        <BasicDropdownCode active={isChecked}></BasicDropdownCode>
     </BoxCard>
   )
 }
 
-export default SoftBtnCard
+export default CardBasicDropdown

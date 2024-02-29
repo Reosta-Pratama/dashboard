@@ -9,7 +9,7 @@ import { RoundedBtnWarning } from '@/components/button/rounded/style/rounded-btn
 import { RoundedBtnPending } from '@/components/button/rounded/style/rounded-btn-pending';
 import { RoundedBtnDanger } from '@/components/button/rounded/style/rounded-btn-danger';
 import { RoundedBtnDark } from '@/components/button/rounded/style/rounded-btn-dark';
-import { BoxCode } from '../../show-code/style/box';
+import { BoxCode } from '../../show-code/box';
 
 interface CodeRoundedBtnProps {
     active: boolean;

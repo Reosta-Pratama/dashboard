@@ -2,59 +2,59 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { SoftBtnPrimary } from '@/components/button/soft/style/btn-primary';
-import { SoftBtnSecondary } from '@/components/button/soft/style/btn-secondary';
-import { SoftBtnSuccess } from '@/components/button/soft/style/btn-success';
-import { SoftBtnWarning } from '@/components/button/soft/style/btn-warning';
-import { SoftBtnPending } from '@/components/button/soft/style/btn-pending';
-import { SoftBtnDanger } from '@/components/button/soft/style/btn-danger';
-import { SoftBtnDark } from '@/components/button/soft/style/btn-dark';
+import { BtnPrimary } from '../../button/basic/style/basic-btn-primary';
+import { BtnSecondary } from '../../button/basic/style/basic-btn-secondary';
+import { BtnSuccess } from '../../button/basic/style/basic-btn-success';
+import { BtnWarning } from '../../button/basic/style/basic-btn-warning';
+import { BtnPending } from '../../button/basic/style/basic-btn-pending';
+import { BtnDanger } from '../../button/basic/style/basic-btn-danger';
+import { BtnDark } from '../../button/basic/style/basic-btn-dark';
 import { BoxCode } from '../../show-code/box';
 
-interface CodeSoftBtnProps {
+interface CodeBasicAccordionProps {
     active: boolean;
 }
 
-export const CodeSoftBtn: React.FC<CodeSoftBtnProps> = ({active}) => {
+export const CodeBasicAccordion: React.FC<CodeBasicAccordionProps> = ({active}) => {
   return (
     <div className="p-5">
         {active == false 
             ? 
             <ul className='flex flex-wrap gap-2'>
                 <li>
-                    <SoftBtnPrimary
+                    <BtnPrimary
                         title="primary"
-                        addType="button"></SoftBtnPrimary> 
+                        addType="button"></BtnPrimary> 
                 </li>
                 <li>
-                    <SoftBtnSecondary
+                    <BtnSecondary
                         title="Secondary"
-                        addType="button"></SoftBtnSecondary> 
+                        addType="button"></BtnSecondary> 
                 </li>
                 <li>
-                    <SoftBtnSuccess
+                    <BtnSuccess
                         title="success"
-                        addType="button"></SoftBtnSuccess> 
+                        addType="button"></BtnSuccess> 
                 </li>
                 <li>
-                    <SoftBtnWarning
+                    <BtnWarning
                         title="Warning"
-                        addType="button"></SoftBtnWarning> 
+                        addType="button"></BtnWarning> 
                 </li>
                 <li>
-                    <SoftBtnPending
+                    <BtnPending
                         title="Pending"
-                        addType="button"></SoftBtnPending> 
+                        addType="button"></BtnPending> 
                 </li>
                 <li>
-                    <SoftBtnDanger
+                    <BtnDanger
                         title="Danger"
-                        addType="button"></SoftBtnDanger> 
+                        addType="button"></BtnDanger> 
                 </li>
                 <li>
-                    <SoftBtnDark
+                    <BtnDark
                         title="Dark"
-                        addType="button"></SoftBtnDark> 
+                        addType="button"></BtnDark> 
                 </li>
             </ul>
             : <Code/>}
@@ -66,43 +66,43 @@ const buttons = [
     {
       title: 'Primary',
       addType: 'button' as const,
-      addClass: 'text-primary bg-primary/20 border-primary/5 hover:bg-primary/10 hover:border-primary/10 focus:ring-primary/20'
+      addClass: 'text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'
     },
     {
       title: 'Secondary',
       addType: 'button' as const,
-      addClass: 'text-slate-500 bg-secondary/40 border-secondary/5 hover:bg-secondary/20 hover:border-secondary/90 focus:ring-secondary/20'
+      addClass: 'text-slate-500 bg-secondary hover:bg-secondary/70 focus:ring-secondary'
     },
     {
       title: 'Success',
       addType: 'button' as const,
-      addClass: 'text-success bg-success/20 border-success/5 hover:bg-success/10 hover:border-success/10 focus:ring-success/20'
+      addClass: 'text-slate-900 bg-success hover:bg-success/90 focus:ring-success/20'
     },
     {
       title: 'Warning',
       addType: 'button' as const,
-      addClass: 'text-warning bg-warning/20 border-warning/5 hover:bg-warning/10 hover:border-warning/10 focus:ring-warning/20'
+      addClass: 'text-slate-900 bg-warning hover:bg-warning/90 focus:ring-warning/20'
     },
     {
       title: 'Pending',
       addType: 'button' as const,
-      addClass: 'text-pending bg-pending/20 border-pending/5 hover:bg-pending/10 hover:border-pending/10 focus:ring-pending/20'
+      addClass: 'text-white bg-pending hover:bg-pending/90 focus:ring-pending/20'
     },
     {
       title: 'Danger',
       addType: 'button' as const,
-      addClass: 'text-danger bg-danger/20 border-danger/5 hover:bg-danger/10 hover:border-danger/10 focus:ring-danger/20'
+      addClass: 'text-white bg-danger hover:bg-danger/90 focus:ring-danger/20'
     },
     {
       title: 'Dark',
       addType: 'button' as const,
-      addClass: 'text-dark bg-dark/20 border-dark/5 hover:bg-dark/10 hover:border-dark/10 focus:ring-dark/20'
+      addClass: 'text-white bg-dark hover:bg-dark/90 focus:ring-dark/20'
     }
 ];
 
 const buttonsAsString = buttons
   .map((item) => {
-    return `<button type="${item.addType}" class="font-medium capitalize w-24 flex justify-center rounded-full shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"> ${item.title}</button>
+    return `<button type="${item.addType}" class="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"> ${item.title}</button>
 `;
   })
 .join('');
@@ -134,6 +134,7 @@ const Code = () => {
                 <span className='text-slate-500 font-medium'>{copied ? 'Copied!' : 'Copy example code'}</span>
             </button>
 
+
             <BoxCode>
                 <pre className='px-5 py-4'>
                     {
@@ -142,7 +143,7 @@ const Code = () => {
                                 <code key={index} className='text-xs'>
                                     &lt;<span className='text-[#22863a]'>button</span> {``}
                                     <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
-                                    <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-full shadow-sm px-3 py-2 border border-solid duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
+                                    <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
                                     {` ${item.title} `}
                                     &lt;/<span className='text-[#22863a]'>button</span>&gt; 
                                     <br/>
