@@ -17,7 +17,7 @@ import {
     FiUser,
     FiUsers
 } from 'react-icons/fi'
-import Divider from '../divider'
+import Divider from '../divider/divider'
 
 const ListNav = () => {
     return (

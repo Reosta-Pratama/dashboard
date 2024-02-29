@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '@/components/card/style/box-card';
-import { BasicDropdownCode } from '../../show-code/dropdown/basic-code';
+import { HeadFootDropdownCode } from '@/components/show-code/dropdown/header-footer-code';
 
-const CardBasicDropdown = () => {
+const CardHeadFootDropdown = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const CardBasicDropdown = () => {
 
   return (
     <BoxCard 
-        title="basic dropdown"
+        title="Header & Footer dropdown"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <BasicDropdownCode active={isChecked}></BasicDropdownCode>
+        <HeadFootDropdownCode active={isChecked}></HeadFootDropdownCode>
     </BoxCard>
   )
 }
 
-export default CardBasicDropdown
+export default CardHeadFootDropdown

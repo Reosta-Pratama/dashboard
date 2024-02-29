@@ -11,7 +11,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({ title, href, addClass  }) => {
     return (
         <Link
             href={href}
-            className={`font-medium capitalize  
+            className={`font-medium capitalize
             w-24 flex justify-center rounded-md shadow-sm px-3 py-2 
             duration-200 ease-in-out focus:ring-4
             ${addClass ?? ''}`}>

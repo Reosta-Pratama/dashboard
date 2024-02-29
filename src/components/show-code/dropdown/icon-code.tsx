@@ -1,18 +1,18 @@
 "use client"
 
 import React, { useState } from 'react'
-import { FiFile } from 'react-icons/fi'
+import { FiActivity, FiAirplay, FiFile } from 'react-icons/fi'
 import { BtnMedium } from '@/components/button/sizes/mediumBtn';
 import { BoxDropdown } from '@/components/dropdown/style/box';
-import { Dropdown } from '@/components/dropdown/basic/basic';
-import { ChildDropdown } from '@/components/dropdown/basic/children';
 import { useDropdown } from '@/components/dropdown/style/toggle';
+import { DropdownIcon } from '@/components/dropdown/icon/box';
+import { ChildDropdownIcon } from '@/components/dropdown/icon/children';
 
-interface BasicDropdownCodeProps {
+interface IconDropdownCodeProps {
     active: boolean;
 }
 
-export const BasicDropdownCode: React.FC<BasicDropdownCodeProps> = ({active}) => {
+export const IconDropdownCode: React.FC<IconDropdownCodeProps> = ({active}) => {
     const { isActive, handleBtnClick } = useDropdown();
 
   return (
@@ -23,22 +23,24 @@ export const BasicDropdownCode: React.FC<BasicDropdownCodeProps> = ({active}) =>
                 <BtnMedium 
                     title="show dropdown" 
                     addType='button' 
-                    func={() => handleBtnClick('basicDropdown')}>
+                    func={() => handleBtnClick('iconDropdown')}>
                 </BtnMedium>
 
-                <Dropdown 
-                    dataOrder='basicDropdown'>
-                    <ChildDropdown 
+                <DropdownIcon 
+                    dataOrder='iconDropdown'>
+                    <ChildDropdownIcon 
+                        icon={<FiActivity />}
                         title='new dropdown' 
                         href=''
-                        toggleDropdown={() => handleBtnClick('basicDropdown')}>
-                    </ChildDropdown>
-                    <ChildDropdown 
+                        toggleDropdown={() => handleBtnClick('iconDropdown')}>
+                    </ChildDropdownIcon>
+                    <ChildDropdownIcon 
+                        icon={<FiAirplay />}
                         title='delete dropdown' 
                         href=''
-                        toggleDropdown={() => handleBtnClick('basicDropdown')}>
-                    </ChildDropdown>
-                </Dropdown>
+                        toggleDropdown={() => handleBtnClick('iconDropdown')}>
+                    </ChildDropdownIcon>
+                </DropdownIcon>
             </BoxDropdown>
             : <Code/>}
     </div>
