@@ -13,7 +13,7 @@ const RoundedBtn: React.FC<RoundedBtnProps> = ({ title, addType, addClass, oncli
             type={addType}
             onClick={onclick}
             className={`font-medium capitalize  
-            w-24 flex justify-center rounded-full shadow-sm px-3 py-2 
+            min-w-24 flex justify-center rounded-full shadow-sm px-3 py-2 
             duration-200 ease-in-out focus:ring-4
             ${addClass ?? ''}`}>
             {title}

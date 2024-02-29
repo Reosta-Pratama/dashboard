@@ -12,7 +12,7 @@ export default function RootLayout({children} : Readonly < {
                 <div className="fixed inset-0 -z-[1] w-full h-full bg-linear-blue"></div>
 
                 <div className="flex gap-5 px-8 py-5">
-                    <div className="relative z-50 w-[210px] flex flex-col gap-6
+                    <div className="relative z-40 w-[210px] flex flex-col gap-6
                         pb-16 ">
                         <Logo></Logo>
                         <ListNav></ListNav>

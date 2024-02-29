@@ -1,3 +1,4 @@
+import CardBlankModal from '@/components/modal/blank/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -14,7 +15,7 @@ const Page = () => {
 
             <div className="grid grid-cols-2 gap-5">
                 <div className='flex flex-col gap-5'>
-
+                    <CardBlankModal></CardBlankModal>
                 </div>
 
                 <div className='flex flex-col gap-5'>
