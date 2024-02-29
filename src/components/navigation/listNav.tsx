@@ -112,8 +112,6 @@ const ListNav = () => {
                         ['alert', '/components-alert'],
                         ['button', '/components-button'],
                         ['dropdown', '/components-dropdown'],
-                        ['icon', '/components-icon'],
-                        ['loading icon', '/components-loading-icon'],
                         ['modal', '/components-modal'],
                         ['notification', '/components-notification'],
                         ['progress bar', '/components-progress-bar'],

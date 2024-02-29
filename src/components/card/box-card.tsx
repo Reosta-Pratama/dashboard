@@ -13,7 +13,8 @@ const BoxCard: React.FC<BoxCardProps> = ({ title, children, isChecked, onCheckbo
   const id = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
-    <div className='bg-white shadow-card rounded-[0.6rem] border border-solid border-[#e2e8f0]'>
+    <div className='bg-white shadow-card rounded-[0.6rem] border border-solid border-[#e2e8f0] 
+      transition-all duration-300 ease-in-out'>
       <div className="flex justify-between items-center p-5 border-b border-solid border-slate-200">
         <h2 className='text-base font-medium capitalize'>{title}</h2>
         
