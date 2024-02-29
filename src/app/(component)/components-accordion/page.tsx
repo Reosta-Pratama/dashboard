@@ -1,3 +1,4 @@
+import BasicAccordionCard from '@/components/card/accordion/basic-card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'
@@ -14,6 +15,7 @@ const page = () => {
 
             <div className="grid grid-cols-2 gap-5">
                 <div className='flex flex-col gap-5'>
+                    <BasicAccordionCard></BasicAccordionCard>
                 </div>
 
                 <div className='flex flex-col gap-5'>

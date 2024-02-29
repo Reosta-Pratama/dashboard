@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { BtnMedium } from '@/components/button/sizes/mediumBtn';
+import { BtnMedium } from '@/components/button/sizes/style/mediumBtn';
 import { BoxDropdown } from '@/components/dropdown/style/box';
 import { ChildDropdown } from '@/components/dropdown/basic/children';
 import { ScrollDropdown } from '@/components/dropdown/scroll/scroll';

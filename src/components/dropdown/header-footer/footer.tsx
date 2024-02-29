@@ -1,6 +1,6 @@
-import { BtnPrimary } from '@/components/button/basic/basic-btn-primary'
-import { LinkBtnPrimary } from '@/components/button/link/btn-primary';
-import { LinkBtnSecondary } from '@/components/button/link/btn-secondary';
+import { BtnPrimary } from '@/components/button/basic/style/basic-btn-primary'
+import { LinkBtnPrimary } from '@/components/button/link/style/btn-primary';
+import { LinkBtnSecondary } from '@/components/button/link/style/btn-secondary';
 import Link from 'next/link';
 import React from 'react'
 
