@@ -23,11 +23,11 @@ const ListNav = () => {
     return (
         <nav>
             <ul className='flex flex-col gap-1'>
-                <Navigation name="dashboard" href="/">
+                {/* <Navigation name="dashboard" href="/">
                     <FiHome/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation
+                {/* <Navigation
                     name='e-commerce'
                     href=''
                     dropdown="yes"
@@ -41,51 +41,51 @@ const ListNav = () => {
                                 ['review', '/e-commerce-review'],
                     ]}>
                     <FiShoppingBag/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="inbox" href="/inbox">
+                {/* <Navigation name="inbox" href="/inbox">
                     <FiInbox/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="file manager" href="/file-manager">
+                {/* <Navigation name="file manager" href="/file-manager">
                     <FiHardDrive/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="poin of sale" href="/poin-of-sale">
+                {/* <Navigation name="poin of sale" href="/poin-of-sale">
                     <FiCreditCard/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="chat" href="/chat">
+                {/* <Navigation name="chat" href="/chat">
                     <FiMessageSquare/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="post" href="/post">
+                {/* <Navigation name="post" href="/post">
                     <FiFileText/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name="calender" href="/calender">
+                {/* <Navigation name="calender" href="/calender">
                     <FiCalendar/>
-                </Navigation>
+                </Navigation> */}
 
-                <Divider></Divider>
+                {/* <Divider></Divider> */}
 
-                <Navigation name = 'crud' href = '' dropdown = "yes"
+                {/* <Navigation name = 'crud' href = '' dropdown = "yes"
                     droplink={[
                         ['data list', '/crud-data-list'],
                         ['form', '/crud-form'],
                     ]}>
                     <FiEdit/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name='users' href='/users'>
+                {/* <Navigation name='users' href='/users'>
                     <FiUsers/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name='profile' href='/profile'>
+                {/* <Navigation name='profile' href='/profile'>
                     <FiUser/>
-                </Navigation>
+                </Navigation> */}
 
-                <Navigation name='pages' href='' dropdown="yes"
+                {/* <Navigation name='pages' href='' dropdown="yes"
                     droplink={[
                         ['wizards', '/pages-wizards'],
                         ['blog', '/pages-blog'],
@@ -99,9 +99,9 @@ const ListNav = () => {
                         ['change password', '/pages-change-password'],
                     ]}>
                     <FiLayout/>
-                </Navigation>
+                </Navigation> */}
 
-                <Divider></Divider>
+                {/* <Divider></Divider> */}
 
                 <Navigation
                     name='components'
