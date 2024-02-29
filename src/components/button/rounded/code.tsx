@@ -24,37 +24,44 @@ export const CodeRoundedBtn: React.FC<CodeRoundedBtnProps> = ({active}) => {
                 <li>
                     <RoundedBtnPrimary
                         title="primary"
-                        addType="button"></RoundedBtnPrimary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnPrimary> 
                 </li>
                 <li>
                     <RoundedBtnSecondary
                         title="Secondary"
-                        addType="button"></RoundedBtnSecondary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnSecondary> 
                 </li>
                 <li>
                     <RoundedBtnSuccess
                         title="success"
-                        addType="button"></RoundedBtnSuccess> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnSuccess> 
                 </li>
                 <li>
                     <RoundedBtnWarning
                         title="Warning"
-                        addType="button"></RoundedBtnWarning> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnWarning> 
                 </li>
                 <li>
                     <RoundedBtnPending
                         title="Pending"
-                        addType="button"></RoundedBtnPending> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnPending> 
                 </li>
                 <li>
                     <RoundedBtnDanger
                         title="Danger"
-                        addType="button"></RoundedBtnDanger> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnDanger> 
                 </li>
                 <li>
                     <RoundedBtnDark
                         title="Dark"
-                        addType="button"></RoundedBtnDark> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></RoundedBtnDark> 
                 </li>
             </ul>
             : <Code/>}

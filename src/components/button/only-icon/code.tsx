@@ -23,43 +23,50 @@ export const CodeOnlyIconBtn: React.FC<CodeOnlyIconBtnProps> = ({active}) => {
             <ul className='flex flex-wrap gap-2'>
                 <li>
                     <OnlyIconBtnPrimary
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiActivity />
                     </OnlyIconBtnPrimary> 
                 </li>
                 <li>
                     <OnlyIconBtnSecondary
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiAirplay />
                     </OnlyIconBtnSecondary> 
                 </li>
                 <li>
                     <OnlyIconBtnSuccess
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiAlertCircle />
                     </OnlyIconBtnSuccess> 
                 </li>
                 <li>
                     <OnlyIconBtnWarning
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiAnchor />
                     </OnlyIconBtnWarning> 
                 </li>
                 <li>
                     <OnlyIconBtnPending
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiAperture />
                     </OnlyIconBtnPending> 
                 </li>
                 <li>
                     <OnlyIconBtnDanger
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiArchive />
                     </OnlyIconBtnDanger> 
                 </li>
                 <li>
                     <OnlyIconBtnDark
-                        addType="button">
+                        addType="button"
+                        addClass="px-3 py-2">
                             <FiBook />
                     </OnlyIconBtnDark> 
                 </li>

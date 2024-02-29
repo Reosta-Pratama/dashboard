@@ -24,37 +24,44 @@ export const CodeSoftBtn: React.FC<CodeSoftBtnProps> = ({active}) => {
                 <li>
                     <SoftBtnPrimary
                         title="primary"
-                        addType="button"></SoftBtnPrimary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnPrimary> 
                 </li>
                 <li>
                     <SoftBtnSecondary
                         title="Secondary"
-                        addType="button"></SoftBtnSecondary> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnSecondary> 
                 </li>
                 <li>
                     <SoftBtnSuccess
                         title="success"
-                        addType="button"></SoftBtnSuccess> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnSuccess> 
                 </li>
                 <li>
                     <SoftBtnWarning
                         title="Warning"
-                        addType="button"></SoftBtnWarning> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnWarning> 
                 </li>
                 <li>
                     <SoftBtnPending
                         title="Pending"
-                        addType="button"></SoftBtnPending> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnPending> 
                 </li>
                 <li>
                     <SoftBtnDanger
                         title="Danger"
-                        addType="button"></SoftBtnDanger> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnDanger> 
                 </li>
                 <li>
                     <SoftBtnDark
                         title="Dark"
-                        addType="button"></SoftBtnDark> 
+                        addType="button"
+                        addClass="min-w-24 px-3 py-2"></SoftBtnDark> 
                 </li>
             </ul>
             : <Code/>}
