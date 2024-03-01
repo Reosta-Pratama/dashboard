@@ -1,4 +1,7 @@
 import CardBlankModal from '@/components/modal/blank/card';
+import CardDeleteModal from '@/components/modal/delete/card';
+import CardSuccessModal from '@/components/modal/success/card';
+import CardWarningModal from '@/components/modal/warning/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -16,10 +19,12 @@ const Page = () => {
             <div className="grid grid-cols-2 gap-5">
                 <div className='flex flex-col gap-5'>
                     <CardBlankModal></CardBlankModal>
+                    <CardWarningModal></CardWarningModal>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-
+                    <CardDeleteModal></CardDeleteModal>
+                    <CardSuccessModal></CardSuccessModal>
                 </div>
             </div>
         </main>

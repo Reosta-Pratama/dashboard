@@ -18,7 +18,11 @@ export const CodeBlankModal: React.FC<CodeBlankModalProps> = ({active}) => {
         {active == false 
             ? 
             <ModalBlank addClass='flex justify-center'>
-                <BtnPrimary title='show modal' addType='button' func={() => handleBtnClick("blankModal")}></BtnPrimary>
+                <BtnPrimary
+                    title='show modal'
+                    addType='button'
+                    func={() => handleBtnClick("blankModal")}
+                    addClass='min-w-24 px-3 py-2'></BtnPrimary>
                 <ValueModalBlank addClass='w-[460px]' dataOrder='blankModal'>
                     This is totally awesome blank modal!
                 </ValueModalBlank>
@@ -30,7 +34,21 @@ export const CodeBlankModal: React.FC<CodeBlankModalProps> = ({active}) => {
 
 const modalsAsString = () => {
     return `
-
+<div class="flex justify-center w-full">
+    <button
+        type="button"
+        class="font-medium capitalize
+            flex justify-center rounded-md shadow-sm
+            duration-200 ease-in-out focus:ring-4
+            text-white bg-primary hover:bg-primary/90 focus:ring-primary/20 min-w-24 px-3 py-2">show modal</button>
+    <div
+        data-order="blankModal"
+        class="modal fixed z-50 inset-0 transition-all duration-300 ease-in-out opacity-0 invisible">
+        <div class="absolute z-10 inset-0 bg-black/60"></div>
+        <div
+            class="relative z-20 bg-white min-w-[460px] shadow-md rounded-md p-10 mx-auto transition-all duration-300 ease-in-out w-[460px] mt-0">This is totally awesome blank modal!</div>
+    </div>
+</div>
   `;
   };
   
@@ -66,7 +84,21 @@ const Code = () => {
                 <pre className='px-5 py-4'>
                 <code className='text-xs'>
 {`
-
+<div class="flex justify-center w-full">
+    <button
+        type="button"
+        class="font-medium capitalize
+            flex justify-center rounded-md shadow-sm
+            duration-200 ease-in-out focus:ring-4
+            text-white bg-primary hover:bg-primary/90 focus:ring-primary/20 min-w-24 px-3 py-2">show modal</button>
+    <div
+        data-order="blankModal"
+        class="modal fixed z-50 inset-0 transition-all duration-300 ease-in-out opacity-0 invisible">
+        <div class="absolute z-10 inset-0 bg-black/60"></div>
+        <div
+            class="relative z-20 bg-white min-w-[460px] shadow-md rounded-md p-10 mx-auto transition-all duration-300 ease-in-out w-[460px] mt-0">This is totally awesome blank modal!</div>
+    </div>
+</div>
 `}
                     </code>
                 </pre>

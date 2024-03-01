@@ -19,7 +19,8 @@ export default function RootLayout({children} : Readonly < {
                     </div>
 
                     <div className="bg-slate-100 flex flex-1 flex-col gap-8
-                        rounded-[30px] px-[22px] pb-10">
+                        rounded-[30px] px-[22px] pb-10
+                        transition-all duration-300 ease-linear">
                         <div
                             className="h-[67px] flex justify-between items-center
                                 border-b border-slate-200">
