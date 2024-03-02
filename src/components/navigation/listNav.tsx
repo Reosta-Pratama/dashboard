@@ -69,10 +69,10 @@ const ListNav = () => {
 
                 {/* <Divider></Divider> */}
 
-                {/* <Navigation name = 'crud' href = '' dropdown = "yes"
+                {/* <Navigation name = 'data list' href = '' dropdown = "yes"
                     droplink={[
-                        ['data list', '/crud-data-list'],
-                        ['form', '/crud-form'],
+                        ['data list 1', '/data-list-1'],
+                        ['data list 2', '/data-list-2'],
                     ]}>
                     <FiEdit/>
                 </Navigation> */}
@@ -117,10 +117,8 @@ const ListNav = () => {
                         ['progress bar', '/components-progress-bar'],
                         ['slide over', '/components-slide-over'],
                         ['tab', '/components-tab'],
-                        ['tabulator', '/components-tabulator'],
                         ['table', '/components-table'],
                         ['tooltip', '/components-tooltip'],
-                        ['typography', '/components-typography'],
                     ]}>
                     <FiGrid/>
                 </Navigation>
