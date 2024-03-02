@@ -2,8 +2,6 @@ export const useSlideOver = () => {
   const handleBtnClick = (dataOrder: string) => {
     const slideElements = document.querySelectorAll('.slideover');
 
-    console.log(slideElements)
-
     slideElements.forEach((element) => {
         const elementDataOrder = element.getAttribute('data-order');
         if (elementDataOrder === dataOrder) {
