@@ -1,3 +1,4 @@
+import { Grid } from '@/components/grid';
 import BasicTableCard from '@/components/table/basic/card';
 import BorderTableCard from '@/components/table/border/card';
 import HeadTableCard from '@/components/table/head/card';
@@ -20,7 +21,7 @@ const page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="regular table"></Title>
 
-            <div className="grid grid-cols-2 gap-5">
+            <Grid>
                 <div className='flex flex-col gap-5'>
                     <BasicTableCard></BasicTableCard>
                     <BorderTableCard></BorderTableCard>
@@ -34,7 +35,7 @@ const page = () => {
                     <SmallTableCard></SmallTableCard>
                     <StripedTableCard></StripedTableCard>
                 </div>
-            </div>
+            </Grid>
         </main>
     );
 }

@@ -1,5 +1,6 @@
 import BasicAlertCard from '@/components/alert/basic/card';
 import IconDismissAlertCard from '@/components/alert/icon-dismiss/card';
+import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -14,7 +15,7 @@ const Page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="Alert"></Title>
 
-            <div className="grid grid-cols-2 gap-5">
+            <Grid>
                 <div className='flex flex-col gap-5'>
                     <BasicAlertCard></BasicAlertCard>
                 </div>
@@ -22,7 +23,7 @@ const Page = () => {
                 <div className='flex flex-col gap-5'>
                     <IconDismissAlertCard></IconDismissAlertCard>
                 </div>
-            </div>
+            </Grid>
         </main>
     );
 }

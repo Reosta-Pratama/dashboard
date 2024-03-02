@@ -3,6 +3,7 @@ import CardHeadFootDropdown from '@/components/dropdown/header-footer/card';
 import CardHeadIconDropdown from '@/components/dropdown/header-icon/card';
 import CardIconDropdown from '@/components/dropdown/icon/card';
 import CardScrollDropdown from '@/components/dropdown/scroll/card';
+import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react'
@@ -17,7 +18,7 @@ const page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="dropdown"></Title>
 
-            <div className="grid grid-cols-2 gap-5">
+            <Grid>
                 <div className='flex flex-col gap-5'>
                     <CardBasicDropdown></CardBasicDropdown>
                     <CardHeadFootDropdown></CardHeadFootDropdown>
@@ -28,7 +29,7 @@ const page = () => {
                     <CardScrollDropdown></CardScrollDropdown>
                     <CardHeadIconDropdown></CardHeadIconDropdown>
                 </div>
-            </div>
+            </Grid>
         </main>
     );
 }

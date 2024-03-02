@@ -1,3 +1,4 @@
+import { Grid } from '@/components/grid';
 import CardBasicNotif from '@/components/notification/basic/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
@@ -13,14 +14,14 @@ const Page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="Notification"></Title>
 
-            <div className="grid grid-cols-2 gap-5">
+            <Grid>
                 <div className='flex flex-col gap-5'>
                     <CardBasicNotif></CardBasicNotif>
                 </div>
 
                 <div className='flex flex-col gap-5'>
                 </div>
-            </div>
+            </Grid>
         </main>
     );
 }

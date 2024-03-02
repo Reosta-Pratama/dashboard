@@ -6,6 +6,7 @@ import OutlineBtnCard from '@/components/button/outline/card';
 import RoundedBtnCard from '@/components/button/rounded/card';
 import SizeBtnCard from '@/components/button/sizes/card';
 import SoftBtnCard from '@/components/button/soft/card';
+import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
 import React from 'react';
@@ -20,7 +21,7 @@ const Page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="buttons"></Title>
 
-            <div className="grid grid-cols-2 gap-5">
+            <Grid>
                 <div className='flex flex-col gap-5'>
                     <BasicBtnCard></BasicBtnCard>
                     <SizeBtnCard></SizeBtnCard>
@@ -34,7 +35,7 @@ const Page = () => {
                     <SoftBtnCard></SoftBtnCard>
                     <OnlyIconBtnCard></OnlyIconBtnCard>
                 </div>
-            </div>
+            </Grid>
         </main>
     );
 }
