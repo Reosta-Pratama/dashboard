@@ -16,7 +16,7 @@ export const AlertSuccessIconDismiss:React.FC<AlertSuccessIconDismissProps> = ({
     <>
       {isActive == false ? 
         <BoxAlertIconDismiss 
-          addClass={`${addClass} 
+          addClass={`${addClass ?? ''} 
               bg-success border-success text-slate-900`}>
               <div className="flex items-center gap-2">
                 <span className='text-lg'>{icon}</span>

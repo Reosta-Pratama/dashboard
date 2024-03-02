@@ -16,7 +16,7 @@ export const AlertPendingIconDismiss:React.FC<AlertPendingIconDismissProps> = ({
     <>
       {isActive == false ? 
         <BoxAlertIconDismiss 
-          addClass={`${addClass} 
+          addClass={`${addClass ?? ''} 
               bg-pending border-pending text-white`}>
               <div className="flex items-center gap-2">
                 <span className='text-lg'>{icon}</span>

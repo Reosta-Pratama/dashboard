@@ -9,7 +9,7 @@ interface AlertPendingProps {
 export const AlertPending:React.FC<AlertPendingProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass} 
+        addClass={`${addClass ?? ''} 
             bg-pending border-pending text-white`}>
             {title}
     </BoxAlertBasic>

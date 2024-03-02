@@ -16,7 +16,7 @@ export const AlertSecondaryIconDismiss:React.FC<AlertSecondaryIconDismissProps> 
     <>
       {isActive == false ? 
         <BoxAlertIconDismiss 
-          addClass={`${addClass} 
+          addClass={`${addClass ?? ''} 
               bg-secondary border-secondary text-slate-500`}>
               <div className="flex items-center gap-2">
                 <span className='text-lg'>{icon}</span>

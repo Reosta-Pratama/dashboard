@@ -9,7 +9,7 @@ interface AlertSuccessProps {
 export const AlertSuccess:React.FC<AlertSuccessProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass}
+        addClass={`${addClass ?? ''}
             bg-success border-success text-slate-900`}>
             {title}
     </BoxAlertBasic>

@@ -9,7 +9,7 @@ interface AlertDangerProps {
 export const AlertDanger:React.FC<AlertDangerProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass} 
+        addClass={`${addClass ?? ''} 
             bg-danger border-danger text-white`}>
             {title}
     </BoxAlertBasic>

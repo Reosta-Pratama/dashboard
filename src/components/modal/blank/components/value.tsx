@@ -16,7 +16,7 @@ export const ValueModalBlank:React.FC<ValueModalBlankProps> = ({children, addCla
         <div className={`relative z-20 bg-white min-w-[460px] 
             shadow-md rounded-md p-10 mx-auto mt-0
             transition-all duration-300 ease-in-out 
-            ${addClass}`}>
+            ${addClass ?? ''}`}>
             {children}
         </div>
     </div>

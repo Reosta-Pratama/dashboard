@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export const useModal = () => {
   const handleBtnClick = (dataOrder: string) => {
     const modalElements = document.querySelectorAll('.modal');

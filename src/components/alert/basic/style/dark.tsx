@@ -9,7 +9,7 @@ interface AlertDarkProps {
 export const AlertDark:React.FC<AlertDarkProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass} 
+        addClass={`${addClass ?? ''} 
             bg-dark border-dark text-white`}>
             {title}
     </BoxAlertBasic>

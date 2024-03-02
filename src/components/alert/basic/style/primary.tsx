@@ -9,7 +9,7 @@ interface AlertPrimaryProps {
 export const AlertPrimary:React.FC<AlertPrimaryProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass} 
+        addClass={`${addClass ?? ''} 
             bg-primary border-primary text-white`}>
             {title}
     </BoxAlertBasic>

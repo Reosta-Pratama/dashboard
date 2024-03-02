@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
 
-interface ModalBlankProps {
+interface SlideOverProps {
     children: ReactNode;
     addClass?: string;
 }
 
-export const ModalBlank:React.FC<ModalBlankProps> = ({children, addClass}) => {
+export const SlideOver:React.FC<SlideOverProps> = ({children, addClass}) => {
   return (
     <div className={`${addClass ?? ''} w-full`}>
         {children}

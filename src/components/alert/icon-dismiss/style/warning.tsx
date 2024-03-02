@@ -16,7 +16,7 @@ export const AlertWarningIconDismiss:React.FC<AlertWarningIconDismissProps> = ({
     <>
       {isActive == false ? 
         <BoxAlertIconDismiss 
-          addClass={`${addClass} 
+          addClass={`${addClass ?? ''} 
               bg-warning border-warning text-slate-900`}>
               <div className="flex items-center gap-2">
                 <span className='text-lg'>{icon}</span>

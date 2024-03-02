@@ -9,7 +9,7 @@ interface AlertSecondaryProps {
 export const AlertSecondary:React.FC<AlertSecondaryProps> = ({title, addClass}) => {
   return (
     <BoxAlertBasic 
-        addClass={`${addClass}
+        addClass={`${addClass ?? ''}
             bg-secondary border-secondary text-slate-500`}>
             {title}
     </BoxAlertBasic>

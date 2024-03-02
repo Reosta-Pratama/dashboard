@@ -16,7 +16,7 @@ export const AlertPrimaryIconDismiss:React.FC<AlertPrimaryIconDismissProps> = ({
     <>
       {isActive == false ? 
         <BoxAlertIconDismiss 
-          addClass={`${addClass} 
+          addClass={`${addClass ?? ''} 
               bg-primary border-primary text-white`}>
               <div className="flex items-center gap-2">
                 <span className='text-lg'>{icon}</span>
