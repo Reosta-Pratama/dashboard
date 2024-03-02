@@ -1,38 +1,35 @@
 import React, { ReactNode } from 'react'
-import { TabBtn } from './button';
+import { TabBtnBoxed } from './button';
 
 interface TabButton {
     dataTab: string;
     name: string;
 }
 
-interface TabProps {
+interface TabBoxedProps {
     buttons: TabButton[];
     children: ReactNode;
 }
 
-export const Tab: React.FC<TabProps> = ({buttons, children}) => {
-
+export const TabBoxed: React.FC<TabBoxedProps> = ({buttons, children}) => {
   return (
     <div className='tab'>
         <ul className='flex items-center'>
             {
                 buttons.map((item, index) => {
                     return (
-                        <TabBtn 
+                        <TabBtnBoxed 
                             key={index} 
                             dataTab={item.dataTab} 
                             name={item.name}
                             index={index}>
-                        </TabBtn>
+                        </TabBtnBoxed>
                     )
                 })
             }
         </ul>
 
-        <div className="p-5 rounded-b-md 
-                border-b border-l border-r 
-                border-solid border-slate-200">
+        <div className="pt-5">
             {children}
         </div>
     </div>

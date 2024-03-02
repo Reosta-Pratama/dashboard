@@ -1,5 +1,5 @@
 import React from 'react'
-import useTab from '../../toggle';
+import useTab from './toggle';
 
 interface TabBtnProps {
     dataTab: string;
