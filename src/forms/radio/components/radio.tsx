@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { HiCheck } from 'react-icons/hi';
 
-interface CheckboxProps {
+interface RadioProps {
     id: string;
     name: string;
     title: string;
@@ -10,7 +9,7 @@ interface CheckboxProps {
     helpText?: string;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({id, name, title, value, help, helpText}) => {
+export const Radio: React.FC<RadioProps> = ({id, name, title, value, help, helpText}) => {
     const [checked, setChecked] = useState(false)
     const [valueHelp, setValueHelp] = useState("")
     
@@ -34,23 +33,21 @@ export const Checkbox: React.FC<CheckboxProps> = ({id, name, title, value, help,
                     id={id}
                     name={name} 
                     value={value}
-                    type="checkbox" 
+                    type="radio" 
                     onChange={handleCheckboxChange}
-                    className={`w-full h-full appearance-none shadow-sm rounded
+                    className={`w-full h-full appearance-none shadow-sm rounded-full
                         border border-solid border-slate-200
                         transition-all duration-200 ease-in-out
-                        focus-visible:outline-none focus:ring-4 focus:ring-primary/20`}/>
+                        focus-visible:outline-none focus:ring-4 focus:ring-primary/20
+                        checked:bg-primary`}/>
                         
                 {
                     checked == true && 
-                    <div  onClick={handleCheckboxChange}
-                        className='absolute inset-0 bg-primary w-full h-full rounded'>
-                        <span className='w-full h-full flex justify-center items-center 
-                            text-xs text-white font-semibold'>
-                            <HiCheck />
-                        </span>
+                    <div onClick={handleCheckboxChange}
+                        className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[5px] h-[5px] rounded-full'>
                     </div>
                 }
+
             </div>
 
             <label htmlFor={id} className="capitalize select-none">{title}</label>

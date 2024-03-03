@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '@/components/card/box-card';
-import { CodeFormCheckbox } from './code';
+import { CodeFormRadio } from './code';
 
-const CardFormCheckbox = () => {
+const CardFormRadio = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const CardFormCheckbox = () => {
 
   return (
     <BoxCard 
-        title=" Checkbox & Switch "
+        title="radio"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeFormCheckbox active={isChecked}/>
+        <CodeFormRadio active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default CardFormCheckbox
+export default CardFormRadio

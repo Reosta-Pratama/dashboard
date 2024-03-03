@@ -3,6 +3,7 @@ import Title from '@/components/title/title';
 import CardFormCheckbox from '@/forms/checkbox/card';
 import CardFormGroup from '@/forms/group/card';
 import CardFormHorizontal from '@/forms/horizontal/card';
+import CardFormRadio from '@/forms/radio/card';
 import CardFormRegular from '@/forms/regular-form/card';
 import CardFormVertical from '@/forms/vertical/card';
 import { Metadata } from 'next';
@@ -28,6 +29,7 @@ const page = () => {
                 <div className='flex flex-col gap-5'>
                     <CardFormVertical></CardFormVertical>
                     <CardFormHorizontal></CardFormHorizontal>
+                    <CardFormRadio></CardFormRadio>
                 </div>
             </Grid>
         </main>

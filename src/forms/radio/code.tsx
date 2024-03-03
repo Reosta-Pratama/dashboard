@@ -2,14 +2,13 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { Checkbox } from './components/checkbox';
-import { Switch } from './components/switch';
+import { Radio } from './components/radio';
 
-interface CodeFormCheckboxProps {
+interface CodeFormRadioProps {
     active: boolean;
 }
 
-export const CodeFormCheckbox: React.FC<CodeFormCheckboxProps> = ({active}) => {
+export const CodeFormRadio: React.FC<CodeFormRadioProps> = ({active}) => {
     const [isChecked, setIsChecked] = useState(false);
 
     const handleSwitchChange = (newValue: boolean) => {
@@ -20,48 +19,27 @@ export const CodeFormCheckbox: React.FC<CodeFormCheckboxProps> = ({active}) => {
     <div className="p-5">
         {active == false 
             ? 
-            <div className="flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                    <p className='font-medium'>Checkbox</p>
-                    <ul className="flex flex-col gap-2">
-                        <li>
-                            <Checkbox 
-                                id="check-1"
-                                name="check-1"
-                                title='Chris Evans'
-                                value='chris-evans'>
-                            </Checkbox>
-                        </li>
+            <div className="flex flex-col gap-2">
+                <Radio 
+                    id="radio-1"
+                    name="radio"
+                    title='Chris Evans'
+                    value='chris-evans'>
+                </Radio>
 
-                        <li>
-                            <Checkbox 
-                                id="check-2"
-                                name="check-1"
-                                title='Liam Neeson'
-                                value='liam-neeson'>
-                            </Checkbox>
-                        </li>
+                <Radio 
+                    id="radio-2"
+                    name="radio"
+                    title='Liam Neeson'
+                    value='chris-evans'>
+                </Radio>
 
-                        <li>
-                            <Checkbox 
-                                id="check-3"
-                                name="check-1"
-                                title='Daniel Craig'
-                                value='daniel-craig'>
-                            </Checkbox>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <p className='font-medium'>Switch</p>
-                    <Switch
-                        id='switch-1'
-                        label="right"
-                        title='Default switch checkbox input'
-                        onSwitchChange={handleSwitchChange}>
-                    </Switch>
-                </div>
+                <Radio 
+                    id="radio-3"
+                    name="radio"
+                    title='Daniel Craig'
+                    value='chris-evans'>
+                </Radio>
             </div>
             : <Code/>}
     </div>
