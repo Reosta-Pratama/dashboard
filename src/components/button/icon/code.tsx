@@ -172,7 +172,7 @@ const Code = () => {
                                     <span className='text-[#005cc5]'>type</span>{`="${item.addType}" `}
                                     <span className='text-[#005cc5]'>class</span>{`="font-medium capitalize w-24 flex justify-center rounded-md shadow-sm px-3 py-2 duration-200 ease-in-out focus:ring-4 ${item.addClass}"`}&gt; 
                                     &lt;<span className='text-[#22863a]'>div</span> {``}
-                                    <span className='text-[#005cc5]'>class</span>="flex justify-center items-center gap-2"&gt;
+                                    <span className='text-[#005cc5]'>class</span>=&quot;flex justify-center items-center gap-2&quot;&gt;
                                     {item.icon} {item.title} 
                                     &lt;<span className='text-[#22863a]'>/div</span>&gt; 
                                     &lt;/<span className='text-[#22863a]'>button</span>&gt; 

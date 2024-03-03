@@ -17,7 +17,7 @@ const DropNav: React.FC<DropNavProps> = ({ active, data }) => {
     } else {
       setDropdownHeight(null);
     }
-  });
+  }, []);
 
   return (
     <ul
