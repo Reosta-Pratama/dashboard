@@ -5,6 +5,7 @@ import CardFormGroup from '@/forms/group/card';
 import CardFormHorizontal from '@/forms/horizontal/card';
 import CardFormRadio from '@/forms/radio/card';
 import CardFormRegular from '@/forms/regular-form/card';
+import CardFormSelect from '@/forms/select/card';
 import CardFormVertical from '@/forms/vertical/card';
 import { Metadata } from 'next';
 import React from 'react'
@@ -30,6 +31,7 @@ const page = () => {
                     <CardFormVertical></CardFormVertical>
                     <CardFormHorizontal></CardFormHorizontal>
                     <CardFormRadio></CardFormRadio>
+                    <CardFormSelect></CardFormSelect>
                 </div>
             </Grid>
         </main>
