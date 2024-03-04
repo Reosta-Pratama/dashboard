@@ -2,19 +2,19 @@
 
 import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
-import { ChartVertical } from './box';
+import { ChartDonut } from './box';
 
-interface CodeChartVerticalProps {
+interface CodeChartDonutProps {
     active: boolean;
 }
 
-export const CodeChartVertical: React.FC<CodeChartVerticalProps> = ({active}) => {
+export const CodeChartDonut: React.FC<CodeChartDonutProps> = ({active}) => {
 
   return (
     <div className="p-5">
         {active == false 
             ? 
-            <ChartVertical></ChartVertical>
+            <ChartDonut></ChartDonut>
             : <Code/>}
     </div>
   )

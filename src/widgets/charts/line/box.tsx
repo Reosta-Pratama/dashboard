@@ -1,25 +1,27 @@
-import { Bar } from 'react-chartjs-2';
-import { DummyChart } from '@/dummys/dummy-chart';
+import { NewDummyChart } from '@/dummys/dummy-charts-2';
 import { Chart, registerables, ChartOptions } from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
 Chart.register(...registerables);
 
-export const ChartVertical = () => {
+export const ChartLine = () => {
     const bgColor = ["#1e3a8a", "#cbd5e1", "#90d12c", "#facc15", "#f97316", "#dc2626", "#1e293b"]
     const dataChart = {
-        labels: DummyChart[0].data.map(item => item.month),
-        datasets: DummyChart.map((item, index) => ({
+        labels: NewDummyChart[0].data.map((item) => item.month.substring(0, 3)), // Mengambil 3 huruf pertama
+        datasets: NewDummyChart.map((item, index) => ({
             label: item.title,
-            barThickness: 8,
             backgroundColor: bgColor[index % bgColor.length], 
             data: item.data.map(subItem => subItem.total),
-            borderWidth: 1,
+            fill: false,
+            tension: 0.4,
+            borderColor: bgColor[index % bgColor.length],
+            borderDash: index === 1 ? [5, 5] : []
         }))
     };
 
     let maxValue = Number.NEGATIVE_INFINITY;
     
-    DummyChart.forEach((chart) => {
+    NewDummyChart.forEach((chart) => {
         chart.data.forEach((item) => {
             if (item.total > maxValue) {
                 maxValue = item.total;
@@ -27,7 +29,7 @@ export const ChartVertical = () => {
         });
     });
 
-    const options: ChartOptions<'bar'> = {
+    const options: ChartOptions<'line'> = {
         scales: {
             x: {
                 grid: {
@@ -39,7 +41,6 @@ export const ChartVertical = () => {
             },
             y: {
                 beginAtZero: true,
-                max: maxValue + 200,
                 ticks: {
                     color: "rgb(100, 116, 139)",
                     precision: 0,
@@ -78,7 +79,7 @@ export const ChartVertical = () => {
 
     return (
         <div className='w-full h-[400px]'>
-            <Bar
+            <Line
                 options={options}
                 data={dataChart}
             />

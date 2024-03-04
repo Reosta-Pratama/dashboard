@@ -4,7 +4,7 @@ import { Chart, registerables, ChartOptions } from 'chart.js';
 
 Chart.register(...registerables);
 
-export const ChartVertical = () => {
+export const ChartHorizontal = () => {
     const bgColor = ["#1e3a8a", "#cbd5e1", "#90d12c", "#facc15", "#f97316", "#dc2626", "#1e293b"]
     const dataChart = {
         labels: DummyChart[0].data.map(item => item.month),
@@ -28,8 +28,9 @@ export const ChartVertical = () => {
     });
 
     const options: ChartOptions<'bar'> = {
+        indexAxis: 'y',
         scales: {
-            x: {
+            y: {
                 grid: {
                     display: false,
                 },
@@ -37,7 +38,7 @@ export const ChartVertical = () => {
                     color: "rgb(100, 116, 139)",
                 }
             },
-            y: {
+            x: {
                 beginAtZero: true,
                 max: maxValue + 200,
                 ticks: {

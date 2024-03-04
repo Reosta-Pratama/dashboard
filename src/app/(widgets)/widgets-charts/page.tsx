@@ -1,5 +1,10 @@
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
+import CardChartDonut from '@/widgets/charts/donut/card';
+import CardChartHorizontal from '@/widgets/charts/horizontal/card';
+import CardChartLine from '@/widgets/charts/line/card';
+import CardChartPie from '@/widgets/charts/pie/card';
+import CardChartStacked from '@/widgets/charts/stacked/card';
 import CardChartVertical from '@/widgets/charts/vertical/card';
 import { Metadata } from 'next';
 import React from 'react'
@@ -17,9 +22,14 @@ const page = () => {
             <Grid>
                 <div className='flex flex-col gap-5'>
                     <CardChartVertical></CardChartVertical>
+                    <CardChartHorizontal></CardChartHorizontal>
+                    <CardChartDonut></CardChartDonut>
                 </div>
 
                 <div className='flex flex-col gap-5'>
+                    <CardChartStacked></CardChartStacked>
+                    <CardChartLine></CardChartLine>
+                    <CardChartPie></CardChartPie>
                 </div>
             </Grid>
         </main>
