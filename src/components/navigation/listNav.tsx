@@ -133,7 +133,6 @@ const ListNav = () => {
                         ['file upload', '/forms-file-upload'],
                         ['regular form', '/forms-regular-form'],
                         ['tom select', '/forms-tom-select'],
-                        ['validation', '/forms-validation'],
                         ['wysiwyg editor', '/forms-wysiwyg-editor'],
                     ]}>
                     <FiSidebar/>

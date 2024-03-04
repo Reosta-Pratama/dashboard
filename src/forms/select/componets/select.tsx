@@ -20,8 +20,7 @@ export const Select: React.FC<SelectProps> = ({id, label, help, helpText, sizing
         } else {
             setValueHelp(helpText)
         }
-    }, []);
-
+    }, [helpText]);
     
   return (
     <div className="flex flex-col gap-2">
