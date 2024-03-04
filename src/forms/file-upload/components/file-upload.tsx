@@ -2,6 +2,7 @@ import { OnlyIconBtnDanger } from '@/components/button/only-icon/style/btn-dange
 import React, { useRef, useState } from 'react';
 import { FiX } from 'react-icons/fi';
 import { useUploadImage } from './controller';
+import Image from 'next/image';
 
 interface FileUploadProps {
     id: string;
@@ -72,12 +73,14 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
                         selectedFiles.map((file, index) => (
                             <li key={index} className='relative group w-[120px] h-[120px] 
                                 rounded-[20px] shadow overflow-hidden'>
-                                <img 
-                                    src={URL.createObjectURL(file)} 
+                                <Image src={URL.createObjectURL(file)}
                                     alt={`Input File ${index + 1}`}
+                                    width={120}
+                                    height={120}
                                     className='w-full h-full object-cover object-center
                                         transition-all duration-300 ease-linear
-                                        group-hover:scale-110 group-hover:blur-sm'/>
+                                        group-hover:scale-110 group-hover:blur-sm'>
+                                </Image>
                                 
                                 <div className="absolute inset-0 w-full h-full hidden
                                     transition-all duration-300 ease-in-out
