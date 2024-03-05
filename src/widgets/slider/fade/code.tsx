@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { DummySlider } from '@/dummys/dummy-slider';
 import { Slider } from '../single/box';
+import Image from 'next/legacy/image';
 
 interface CodeSliderFadeProps {
     active: boolean;
@@ -16,7 +17,7 @@ export const CodeSliderFade: React.FC<CodeSliderFadeProps> = ({active}) => {
         {active == false 
             ? 
             <Slider
-                height={256}
+                height={0}
                 loop={true}
                 arrow={true}
                 dots={true}
@@ -29,11 +30,17 @@ export const CodeSliderFade: React.FC<CodeSliderFadeProps> = ({active}) => {
                 {
                     DummySlider.map((item, index) => (
                         <div key={index}
-                            className="w-full h-full">
-                            <img 
-                                src={item.image} 
+                            className="w-full h-full rounded-md overflow-hidden">
+                            <Image
+                                src={item.image}
                                 alt={`Image slider-${index}`}
-                                className='w-full h-full object-cover object-center rounded-md'/>
+                                priority={true}
+                                width={100} 
+                                height={60} 
+                                layout="responsive" 
+                                objectFit="cover"
+                                objectPosition="center">
+                            </Image>
                         </div>
                     ))
                 }

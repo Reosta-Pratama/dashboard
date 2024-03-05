@@ -94,7 +94,7 @@ export const Slider: React.FC<SliderProps> = ({children, loop, arrow, dots, spac
                         .Children
                         .map(children, (child, idx) => (
                         <div className="keen-slider__slide transition-opacity ease-in" 
-                            style={{ opacity: fade == true ? opacities[idx] : 1, height: height + "px" }}>
+                            style={{ opacity: fade == true ? opacities[idx] : 1, height: height != 0 ? height + "px" : "auto" }}>
                             {child}
                         </div>
                     ))
