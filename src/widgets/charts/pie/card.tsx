@@ -13,7 +13,7 @@ const CardChartPie = () => {
 
   return (
     <BoxCard 
-        title="  donut Bar Chart  "
+        title="  pie Bar Chart  "
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
         <CodeChartPie active={isChecked}/>
