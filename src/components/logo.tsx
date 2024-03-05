@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,7 +13,8 @@ const Logo = () => {
                 alt="Logo apps"
                 width={24}
                 height={24}
-                loading="lazy"></Image>
+                layout="fixed"
+                priority={true}></Image>
             <h1 className="text-lg text-white capitalize">admin</h1>
         </Link>
     )

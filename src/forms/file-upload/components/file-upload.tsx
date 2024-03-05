@@ -2,7 +2,7 @@ import { OnlyIconBtnDanger } from '@/components/button/only-icon/style/btn-dange
 import React, { useRef, useState } from 'react';
 import { FiX } from 'react-icons/fi';
 import { useUploadImage } from './controller';
-import Image from 'next/image';
+import Image from 'next/legacy/image'
 
 interface FileUploadProps {
     id: string;

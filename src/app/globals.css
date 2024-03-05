@@ -60,10 +60,6 @@ samp {
     right: 0px;
 }
 
-.arrow.disabled{
-    cursor: no-drop;
-}
-
 .dot{
     width: 12px;
     height: 12px;

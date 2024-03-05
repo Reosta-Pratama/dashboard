@@ -1,5 +1,6 @@
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
+import CardImageZoom from '@/widgets/image-zoom/card';
 import { Metadata } from 'next';
 import React from 'react'
 
@@ -15,9 +16,7 @@ const page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                </div>
-
-                <div className='flex flex-col gap-5'>
+                    <CardImageZoom></CardImageZoom>
                 </div>
             </Grid>
         </main>

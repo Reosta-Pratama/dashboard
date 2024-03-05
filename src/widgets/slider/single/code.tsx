@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { Slider } from './box';
 import { DummySlider } from '@/dummys/dummy-slider';
-import Image from 'next/image';
 
 interface CodeSliderSingleProps {
     active: boolean;
@@ -17,6 +16,7 @@ export const CodeSliderSingle: React.FC<CodeSliderSingleProps> = ({active}) => {
         {active == false 
             ? 
             <Slider
+                height={128}
                 loop={true}
                 arrow={true}
                 dots={false}

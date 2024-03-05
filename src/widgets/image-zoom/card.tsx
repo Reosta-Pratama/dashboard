@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import BoxCard from '@/components/card/box-card';
-import { CodeSliderCenter } from './code';
+import { CodeImageZoom } from './code';
 
-const CardSlidercenter = () => {
+const CardImageZoom = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -13,12 +13,12 @@ const CardSlidercenter = () => {
 
   return (
     <BoxCard 
-        title="center mode"
+        title="image"
         isChecked={isChecked} 
         onCheckboxChange={handleCheckboxChange}>
-        <CodeSliderCenter active={isChecked}/>
+        <CodeImageZoom active={isChecked}/>
     </BoxCard>
   )
 }
 
-export default CardSlidercenter
+export default CardImageZoom

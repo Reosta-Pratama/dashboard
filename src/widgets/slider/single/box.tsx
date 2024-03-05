@@ -14,6 +14,7 @@ interface SliderProps {
     viewDesktop?: number;
     center?: boolean;
     fade: boolean;
+    height?: number;
 }
 
 function Arrow(props: {
@@ -26,8 +27,8 @@ function Arrow(props: {
       <button
         onClick={props.onClick}
         className={`arrow ${
-            props.left ? "left" : "right"
-            } ${disabled}`}>
+            props.left ? "left" : "right"} 
+            ${disabled}`}>
             {props.left && (
                 <FiChevronLeft />
             )}
@@ -40,7 +41,7 @@ function Arrow(props: {
 }
 
 export const Slider: React.FC<SliderProps> = ({children, loop, arrow, dots, spacing, 
-    viewPhone, viewTablet, viewDesktop, center, fade}) => {
+    viewPhone, viewTablet, viewDesktop, center, fade, height}) => {
     
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [loaded, setLoaded] = useState(false)
@@ -92,8 +93,8 @@ export const Slider: React.FC<SliderProps> = ({children, loop, arrow, dots, spac
                     React
                         .Children
                         .map(children, (child, idx) => (
-                        <div className="keen-slider__slide h-32 transition-opacity ease-in-out" 
-                        style={{ opacity: fade == true ? opacities[idx] : 1 }}>
+                        <div className="keen-slider__slide transition-opacity ease-in" 
+                            style={{ opacity: fade == true ? opacities[idx] : 1, height: height + "px" }}>
                             {child}
                         </div>
                     ))

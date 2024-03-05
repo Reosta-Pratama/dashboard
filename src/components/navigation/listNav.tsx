@@ -85,7 +85,7 @@ const ListNav = () => {
                     <FiUser/>
                 </Navigation> */}
 
-                {/* <Navigation name='pages' href='' dropdown="yes"
+                <Navigation name='pages' href='' dropdown="yes"
                     droplink={[
                         ['wizards', '/pages-wizards'],
                         ['blog', '/pages-blog'],
@@ -99,9 +99,9 @@ const ListNav = () => {
                         ['change password', '/pages-change-password'],
                     ]}>
                     <FiLayout/>
-                </Navigation> */}
+                </Navigation>
 
-                {/* <Divider></Divider> */}
+                <Divider></Divider>
 
                 <Navigation
                     name='components'
