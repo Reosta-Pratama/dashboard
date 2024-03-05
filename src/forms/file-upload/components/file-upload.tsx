@@ -73,8 +73,10 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
                         selectedFiles.map((file, index) => (
                             <li key={index} className='relative group w-[120px] h-[120px] 
                                 rounded-[20px] shadow overflow-hidden'>
-                                <Image src={URL.createObjectURL(file)}
+                                <Image 
+                                    src={URL.createObjectURL(file)}
                                     alt={`Input File ${index + 1}`}
+                                    loading='lazy'
                                     width={120}
                                     height={120}
                                     className='w-full h-full object-cover object-center
