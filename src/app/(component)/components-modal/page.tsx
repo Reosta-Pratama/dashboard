@@ -1,11 +1,12 @@
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
-import CardBlankModal from '@/components/modal/blank/card';
-import CardDeleteModal from '@/components/modal/delete/card';
-import CardSuccessModal from '@/components/modal/success/card';
-import CardWarningModal from '@/components/modal/warning/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+const CardBlankModal = React.lazy(() => import('@/components/modal/blank/card'));
+const CardDeleteModal = React.lazy(() => import('@/components/modal/delete/card'));
+const CardSuccessModal = React.lazy(() => import('@/components/modal/success/card'));
+const CardWarningModal = React.lazy(() => import('@/components/modal/warning/card'));
 
 export const metadata: Metadata = {
     title: "Modal",
@@ -19,13 +20,17 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <CardBlankModal></CardBlankModal>
-                    <CardWarningModal></CardWarningModal>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardBlankModal></CardBlankModal>
+                        <CardWarningModal></CardWarningModal>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <CardDeleteModal></CardDeleteModal>
-                    <CardSuccessModal></CardSuccessModal>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardDeleteModal></CardDeleteModal>
+                        <CardSuccessModal></CardSuccessModal>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

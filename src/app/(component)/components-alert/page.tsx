@@ -1,9 +1,10 @@
-import BasicAlertCard from '@/components/alert/basic/card';
-import IconDismissAlertCard from '@/components/alert/icon-dismiss/card';
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+import React, { Suspense } from 'react';
+
+const BasicAlertCard = React.lazy(() => import('@/components/alert/basic/card'));
+const IconDismissAlertCard = React.lazy(() => import('@/components/alert/icon-dismiss/card'));
 
 export const metadata: Metadata = {
     title: "Alert",
@@ -17,11 +18,15 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <BasicAlertCard></BasicAlertCard>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <BasicAlertCard></BasicAlertCard>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <IconDismissAlertCard></IconDismissAlertCard>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <IconDismissAlertCard></IconDismissAlertCard>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

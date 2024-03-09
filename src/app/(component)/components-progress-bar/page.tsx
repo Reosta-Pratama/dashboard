@@ -1,9 +1,10 @@
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
-import CardBasicProgress from '@/components/progress-bar/basic/card';
-import CardLabelProgress from '@/components/progress-bar/label/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+const CardBasicProgress = React.lazy(() => import('@/components/progress-bar/basic/card'));
+const CardLabelProgress = React.lazy(() => import('@/components/progress-bar/label/card'));
 
 export const metadata: Metadata = {
     title: "Progressbar",
@@ -17,11 +18,15 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <CardBasicProgress></CardBasicProgress>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardBasicProgress></CardBasicProgress>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <CardLabelProgress></CardLabelProgress>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardLabelProgress></CardLabelProgress>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

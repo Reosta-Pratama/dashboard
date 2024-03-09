@@ -1,9 +1,10 @@
-import BasicAccordionCard from '@/components/accordion/basic/card';
-import BoxAccordionCard from '@/components/accordion/boxed/card';
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react'
+import React, { Suspense } from 'react'
+
+const BasicAccordionCard = React.lazy(() => import('@/components/accordion/basic/card'));
+const BoxAccordionCard = React.lazy(() => import('@/components/accordion/boxed/card'));
 
 export const metadata: Metadata = {
     title: "Accordion",
@@ -17,11 +18,15 @@ const page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <BasicAccordionCard></BasicAccordionCard>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <BasicAccordionCard></BasicAccordionCard>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <BoxAccordionCard></BoxAccordionCard>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <BoxAccordionCard></BoxAccordionCard>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

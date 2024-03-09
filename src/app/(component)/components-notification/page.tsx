@@ -1,8 +1,9 @@
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
-import CardBasicNotif from '@/components/notification/basic/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+const CardBasicNotif = React.lazy(() => import('@/components/notification/basic/card'));
 
 export const metadata: Metadata = {
     title: "Notification",
@@ -16,10 +17,9 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <CardBasicNotif></CardBasicNotif>
-                </div>
-
-                <div className='flex flex-col gap-5'>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardBasicNotif></CardBasicNotif>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

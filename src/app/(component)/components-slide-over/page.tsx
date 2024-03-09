@@ -1,9 +1,10 @@
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
-import CardBlankSlide from '@/components/slide-over/blank/card';
-import CardCloseSlide from '@/components/slide-over/close/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+const CardBlankSlide = React.lazy(() => import('@/components/slide-over/blank/card'));
+const CardCloseSlide = React.lazy(() => import('@/components/slide-over/close/card'));
 
 export const metadata: Metadata = {
     title: "Slide Over",
@@ -17,11 +18,15 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <CardBlankSlide></CardBlankSlide>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardBlankSlide></CardBlankSlide>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <CardCloseSlide></CardCloseSlide>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardCloseSlide></CardCloseSlide>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

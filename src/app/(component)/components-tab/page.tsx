@@ -1,10 +1,11 @@
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
-import CardBasicTab from '@/components/tab/basic/card';
-import CardBoxedTab from '@/components/tab/boxed/card';
-import CardLinkTab from '@/components/tab/link/card';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+const CardBasicTab = React.lazy(() => import('@/components/tab/basic/card'));
+const CardBoxedTab = React.lazy(() => import('@/components/tab/boxed/card'));
+const CardLinkTab = React.lazy(() => import('@/components/tab/link/card'));
 
 export const metadata: Metadata = {
     title: "Tab",
@@ -18,9 +19,11 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <CardBasicTab></CardBasicTab>
-                    <CardBoxedTab></CardBoxedTab>
-                    <CardLinkTab></CardLinkTab>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CardBasicTab></CardBasicTab>
+                        <CardBoxedTab></CardBoxedTab>
+                        <CardLinkTab></CardLinkTab>
+                    </Suspense>
                 </div>
             </Grid>
         </main>

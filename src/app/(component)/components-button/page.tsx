@@ -1,15 +1,17 @@
-import BasicBtnCard from '@/components/button/basic/card';
-import IconBtnCard from '@/components/button/icon/card';
-import LinkBtnCard from '@/components/button/link/card';
-import OnlyIconBtnCard from '@/components/button/only-icon/card';
-import OutlineBtnCard from '@/components/button/outline/card';
-import RoundedBtnCard from '@/components/button/rounded/card';
-import SizeBtnCard from '@/components/button/sizes/card';
-import SoftBtnCard from '@/components/button/soft/card';
+import React, { Suspense } from 'react';
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
 import { Metadata } from 'next';
-import React from 'react';
+
+// Import komponen dengan React.lazy
+const BasicBtnCard = React.lazy(() => import('@/components/button/basic/card'));
+const IconBtnCard = React.lazy(() => import('@/components/button/icon/card'));
+const LinkBtnCard = React.lazy(() => import('@/components/button/link/card'));
+const OnlyIconBtnCard = React.lazy(() => import('@/components/button/only-icon/card'));
+const OutlineBtnCard = React.lazy(() => import('@/components/button/outline/card'));
+const RoundedBtnCard = React.lazy(() => import('@/components/button/rounded/card'));
+const SizeBtnCard = React.lazy(() => import('@/components/button/sizes/card'));
+const SoftBtnCard = React.lazy(() => import('@/components/button/soft/card'));
 
 export const metadata: Metadata = {
     title: "Regular Button",
@@ -23,17 +25,23 @@ const Page = () => {
 
             <Grid>
                 <div className='flex flex-col gap-5'>
-                    <BasicBtnCard></BasicBtnCard>
-                    <SizeBtnCard></SizeBtnCard>
-                    <LinkBtnCard></LinkBtnCard>
-                    <IconBtnCard></IconBtnCard>
+                    {/* Suspense untuk menangani loading */}
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <BasicBtnCard></BasicBtnCard>
+                        <SizeBtnCard></SizeBtnCard>
+                        <LinkBtnCard></LinkBtnCard>
+                        <IconBtnCard></IconBtnCard>
+                    </Suspense>
                 </div>
 
                 <div className='flex flex-col gap-5'>
-                    <OutlineBtnCard></OutlineBtnCard>
-                    <RoundedBtnCard></RoundedBtnCard>
-                    <SoftBtnCard></SoftBtnCard>
-                    <OnlyIconBtnCard></OnlyIconBtnCard>
+                    {/* Suspense untuk menangani loading */}
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <OutlineBtnCard></OutlineBtnCard>
+                        <RoundedBtnCard></RoundedBtnCard>
+                        <SoftBtnCard></SoftBtnCard>
+                        <OnlyIconBtnCard></OnlyIconBtnCard>
+                    </Suspense>
                 </div>
             </Grid>
         </main>
