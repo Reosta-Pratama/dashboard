@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Navigation from './nav'
 import {
@@ -18,14 +20,17 @@ import {
     FiUsers
 } from 'react-icons/fi'
 import Divider from '../divider/divider'
+import { usePathname } from 'next/navigation'
 
 const ListNav = () => {
+    const pathname = usePathname()
+
     return (
         <nav>
             <ul className='flex flex-col gap-1'>
-                {/* <Navigation name="dashboard" href="/">
+                <Navigation name="dashboard" href="/" currentLink={pathname === "/"}>
                     <FiHome/>
-                </Navigation> */}
+                </Navigation>
 
                 {/* <Navigation
                     name='e-commerce'
@@ -43,7 +48,7 @@ const ListNav = () => {
                     <FiShoppingBag/>
                 </Navigation> */}
 
-                {/* <Navigation name="inbox" href="/inbox">
+                {/* <Navigation name="inbox" href="/inbox" currentLink={pathname === "/inbox"}>
                     <FiInbox/>
                 </Navigation> */}
 
@@ -67,7 +72,7 @@ const ListNav = () => {
                     <FiCalendar/>
                 </Navigation> */}
 
-                {/* <Divider></Divider> */}
+                <Divider></Divider>
 
                 {/* <Navigation name = 'data list' href = '' dropdown = "yes"
                     droplink={[
@@ -85,7 +90,11 @@ const ListNav = () => {
                     <FiUser/>
                 </Navigation> */}
 
-                <Navigation name='pages' href='' dropdown="yes"
+                <Navigation 
+                    name='pages' 
+                    href='#' 
+                    currentLink={pathname.startsWith("/pages")}
+                    dropdown="yes"
                     droplink={[
                         ['wizards', '/pages-wizards'],
                         ['blog', '/pages-blog'],
@@ -105,7 +114,8 @@ const ListNav = () => {
 
                 <Navigation
                     name='components'
-                    href=''
+                    href='#'
+                    currentLink={pathname.startsWith("/components")}
                     dropdown="yes"
                     droplink={[
                         ['accordion', '/components-accordion'],
@@ -126,7 +136,8 @@ const ListNav = () => {
 
                 <Navigation
                     name='forms'
-                    href=''
+                    href='#'
+                    currentLink={pathname.startsWith("/forms")}
                     dropdown="yes"
                     droplink={[
                         ['datepicker', '/forms-datepicker'],
@@ -141,7 +152,8 @@ const ListNav = () => {
 
                 <Navigation
                     name='widgets'
-                    href=''
+                    href='#'
+                    currentLink={pathname.startsWith("/widgets")}
                     dropdown="yes"
                     droplink={[
                         ['charts', '/widgets-charts'],
