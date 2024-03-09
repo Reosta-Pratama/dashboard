@@ -13,7 +13,7 @@ interface HeadFootDropdownCodeProps {
 }
 
 export const HeadFootDropdownCode: React.FC<HeadFootDropdownCodeProps> = ({active}) => {
-    const { isActive, handleBtnClick } = useDropdown();
+    const { handleBtnClick } = useDropdown();
 
   return (
     <div className="p-5">
@@ -21,6 +21,7 @@ export const HeadFootDropdownCode: React.FC<HeadFootDropdownCodeProps> = ({activ
             ? 
             <BoxDropdown>
                 <BtnMedium 
+                    addClass='text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'
                     title="show dropdown" 
                     addType='button' 
                     func={() => handleBtnClick('headfootDropdown')}>

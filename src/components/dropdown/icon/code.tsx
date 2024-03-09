@@ -13,14 +13,15 @@ interface IconDropdownCodeProps {
 }
 
 export const IconDropdownCode: React.FC<IconDropdownCodeProps> = ({active}) => {
-    const { isActive, handleBtnClick } = useDropdown();
+    const { handleBtnClick } = useDropdown();
 
   return (
     <div className="p-5">
         {active == false 
             ? 
             <BoxDropdown>
-                <BtnMedium 
+                <BtnMedium
+                    addClass='text-white bg-primary hover:bg-primary/90 focus:ring-primary/20' 
                     title="show dropdown" 
                     addType='button' 
                     func={() => handleBtnClick('iconDropdown')}>

@@ -22,19 +22,19 @@ export const CodeSizeBtn: React.FC<CodeSizeBtnProps> = ({active}) => {
                         <BtnSmall
                             title="small"
                             addType="button"
-                            addClass='min-w-24'></BtnSmall> 
+                            addClass='min-w-24 text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'></BtnSmall> 
                     </li>
                     <li>
                         <BtnMedium
                             title="medium"
                             addType="button"
-                            addClass='min-w-24'></BtnMedium> 
+                            addClass='min-w-24 text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'></BtnMedium> 
                     </li>
                     <li>
                         <BtnLarge
                             title="large"
                             addType="button"
-                            addClass='min-w-24'></BtnLarge> 
+                            addClass='min-w-24 text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'></BtnLarge> 
                     </li>
                 </ul>
             </div>

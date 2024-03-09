@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 interface SizeBtnProps {
-    title: string;
+    title: string | ReactElement;
     addType: "submit" | "reset" | "button" | undefined;
     addClass?: string | null;
     onclick?: () => void;

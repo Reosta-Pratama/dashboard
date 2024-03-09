@@ -13,7 +13,7 @@ interface ScrollDropdownCodeProps {
 }
 
 export const ScrollDropdownCode: React.FC<ScrollDropdownCodeProps> = ({active}) => {
-    const { isActive, handleBtnClick } = useDropdown();
+    const { handleBtnClick } = useDropdown();
 
   return (
     <div className="p-5">
@@ -21,6 +21,7 @@ export const ScrollDropdownCode: React.FC<ScrollDropdownCodeProps> = ({active}) 
             ? 
             <BoxDropdown>
                 <BtnMedium 
+                    addClass='text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'
                     title="show dropdown" 
                     addType='button' 
                     func={() => handleBtnClick('scrollDropdown')}>

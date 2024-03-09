@@ -13,7 +13,7 @@ interface BasicDropdownCodeProps {
 }
 
 export const BasicDropdownCode: React.FC<BasicDropdownCodeProps> = ({active}) => {
-    const { isActive, handleBtnClick } = useDropdown();
+    const { handleBtnClick } = useDropdown();
 
   return (
     <div className="p-5">
@@ -21,6 +21,7 @@ export const BasicDropdownCode: React.FC<BasicDropdownCodeProps> = ({active}) =>
             ? 
             <BoxDropdown>
                 <BtnMedium 
+                    addClass='text-white bg-primary hover:bg-primary/90 focus:ring-primary/20'
                     title="show dropdown" 
                     addType='button' 
                     func={() => handleBtnClick('basicDropdown')}>

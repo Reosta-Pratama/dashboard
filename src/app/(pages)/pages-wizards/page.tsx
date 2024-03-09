@@ -2,7 +2,8 @@ import { BtnPrimary } from '@/components/button/basic/style/btn-primary';
 import { BtnSecondary } from '@/components/button/basic/style/btn-secondary';
 import { Card } from '@/components/card/card';
 import Title from '@/components/title/title';
-import { WidgetValue } from '@/components/wizard/child';
+import { WidgetBtn } from '@/pages/wizard/button';
+import { WidgetValue } from '@/pages/wizard/child';
 import { Input } from '@/forms/regular-form/components/input';
 import { Select } from '@/forms/select/componets/select';
 import { Metadata } from 'next';
@@ -18,16 +19,20 @@ const page = () => {
         <main className='flex flex-col gap-5'>
             <Title name="Wizard layout"></Title>
             <Card
-                addClass='py-10'
-                btnWidget={[
-                    { number: 1, desc: "create new account" },
-                    { number: 2, desc: "Setup Your Profile" },
-                    { number: 3, desc: "Setup Your Business Details" },
-                    { number: 4, desc: "Setup Billing Account" },
-                    { number: 5, desc: "Finalize your purchase" },
-                ]}>
+                addClass='py-10'>
+                <WidgetBtn
+                    btnWidget={[
+                        { number: 1, desc: "create new account" },
+                        { number: 2, desc: "Setup Your Profile" },
+                        { number: 3, desc: "Setup Your Business Details" },
+                        { number: 4, desc: "Setup Billing Account" },
+                        { number: 5, desc: "Finalize your purchase" },
+                    ]}>
+                </WidgetBtn>
 
                 <WidgetValue>
+
+
                     <div className="flex flex-col gap-4">
                         <div className="text-base font-medium">Profile Settings</div>
                         

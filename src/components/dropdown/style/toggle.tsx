@@ -1,8 +1,4 @@
-import { useState } from 'react';
-
 export const useDropdown = () => {
-  const [isActive, setIsActive] = useState(false);
-
   const handleBtnClick = (dataOrder: string) => {
     const dropdownElements = document.querySelectorAll('.dropdown');
 
@@ -27,7 +23,6 @@ export const useDropdown = () => {
   };
 
   return {
-    isActive,
     handleBtnClick,
   };
 };
