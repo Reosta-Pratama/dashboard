@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
 
 interface InputProps {
@@ -7,7 +9,7 @@ interface InputProps {
     label: boolean;
     readonly: boolean;
     shape: "square" | "rounded";
-    help?: "info" | "warning" | "error";
+    help?: "info" | "warning" | "error" | "";
     helpText?: string;
     sizing: "small" | "medium" | "large";
     layout: "vertical" | "horizontal";
@@ -52,7 +54,7 @@ export const Input: React.FC<InputProps> = ({id, title, type, label, readonly, s
 
     
   return (
-    <div className="flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-2">
         <div className={`flex gap-2 ${directionInput[0]}`}>
             {
                 label == true && <label htmlFor={id} className={`capitalize select-none ${directionInput[1]}`}>{title}</label>
