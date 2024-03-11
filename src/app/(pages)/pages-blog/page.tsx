@@ -1,8 +1,9 @@
 import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
+import { DummyBlog } from '@/dummys/dummy-blog';
+import { Blog } from '@/pages/blog/blog';
 import { OptionBlog } from '@/pages/blog/option';
 import { Metadata } from 'next';
-import Image from 'next/legacy/image';
 import React from 'react'
 
 export const metadata: Metadata = {
@@ -11,52 +12,38 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-
     return (
         <main className='flex flex-col gap-5'>
             <div className="flex justify-between items-center">
                 <Title name="Blog layout"></Title>
-                <OptionBlog></OptionBlog>
+                <OptionBlog
+                    addLink=''
+                    shareLink=''
+                    downloadLink=''>
+                </OptionBlog>
             </div>
 
             <Grid>
-                <div className="bg-white flex flex-col shadow-card rounded-[.6rem] overflow-hidden">
-                    <div className="relative">
-                        <Image
-                            src={'https://source.unsplash.com/random/800x600'}
-                            alt='testing'
-                            loading='lazy'
-                            layout='responsive'
-                            width={100}
-                            height={60}
-                            objectFit='cover'>
-                        </Image>
-
-                        <div className="absolute z-[1] inset-0 bg-linear-black"></div>
-
-                        <div className="absolute z-[2] top-6 left-0 w-full px-5">
-                            <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full overflow-hidden">
-                                    <Image
-                                        src={'/img/blog/profile-1.jpg'}
-                                        alt='profile'
-                                        loading='lazy'
-                                        layout='responsive'
-                                        width={100}
-                                        height={100}
-                                        objectFit='cover'
-                                        objectPosition={'center'}>
-                                    </Image>
-                                </div>
-
-                                <div className="flex flex-col flex-1 gap-[2px] text-white">
-                                    <h3 className='font-medium capitalize'>Nama Author</h3>
-                                    <span className='text-xs'>45 seconds ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {
+                    DummyBlog.map((item, index) => (
+                        <Blog
+                            key={index}
+                            index={index}
+                            cover={item.cover}
+                            title={item.title}
+                            desc={item.desc}
+                            categories={item.categories.map(category => category.category)}
+                            authors={[{
+                                createdBy: item.author.createdBy,
+                                photoProfile: item.author.photoProfile,
+                                createdAt: item.author.createdAt
+                            }]}
+                            totalComments={item.totalComments}
+                            totalLikes={item.totalLikes}
+                            totalViews={item.totalViews}>
+                        </Blog>
+                    ))
+                }
             </Grid>
         </main>
     );

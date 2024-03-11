@@ -1,6 +1,6 @@
 "use client"
 
-import { BtnPrimary } from '@/components/button/basic/style/btn-primary'
+import { LinkBtnPrimary } from '@/components/button/link/style/btn-primary'
 import { BtnMedium } from '@/components/button/sizes/style/mediumBtn'
 import { DropdownIcon } from '@/components/dropdown/icon/components/box'
 import { ChildDropdownIcon } from '@/components/dropdown/icon/components/children'
@@ -9,12 +9,22 @@ import { useDropdown } from '@/components/dropdown/style/toggle'
 import React from 'react'
 import { FiDownload, FiPlus, FiUpload } from 'react-icons/fi'
 
-export const OptionBlog = () => {
+interface OptionBlogProps {
+    addLink: string;
+    shareLink: string;
+    downloadLink: string
+}
+
+export const OptionBlog: React.FC<OptionBlogProps> = ({addLink, shareLink, downloadLink}) => {
     const { handleBtnClick } = useDropdown()
 
   return (
     <div className="flex gap-2">
-        <BtnPrimary title={'add new post'} addType={'button'} addClass='px-3 py-2'></BtnPrimary>
+        <LinkBtnPrimary 
+            title={'add new post'} 
+            href={addLink}
+            addClass='px-3 py-2'>
+        </LinkBtnPrimary>
 
         <BoxDropdown>
             <BtnMedium 
@@ -29,13 +39,13 @@ export const OptionBlog = () => {
                     <ChildDropdownIcon 
                         icon={<FiUpload />}
                         title='share post' 
-                        href=''
+                        href={shareLink}
                         toggleDropdown={() => handleBtnClick('blogDrop')}>
                     </ChildDropdownIcon>
                     <ChildDropdownIcon 
                         icon={<FiDownload />}
                         title='download post' 
-                        href=''
+                        href={downloadLink}
                         toggleDropdown={() => handleBtnClick('blogDrop')}>
                     </ChildDropdownIcon>
                 </DropdownIcon>

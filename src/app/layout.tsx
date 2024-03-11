@@ -30,7 +30,8 @@ export default function RootLayout({children} : Readonly < {
                                     alt="Animation hand"
                                     width={24}
                                     height={24}
-                                    loading="lazy">
+                                    loading="lazy"
+                                    priority={false}>
                                 </Image>
                             </div>
                         </div>

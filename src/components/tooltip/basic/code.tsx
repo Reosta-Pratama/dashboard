@@ -4,21 +4,14 @@ import React, { useState } from 'react'
 import { FiFile } from 'react-icons/fi'
 import { Tooltip } from './components/box';
 import { ValueTooltip } from './components/value';
+import { useTooltipBasic } from './toggle';
 
 interface CodeBasicTooltipProps {
     active: boolean;
 }
 
 export const CodeBasicTooltip: React.FC<CodeBasicTooltipProps> = ({active}) => {
-    const [isActive, setIsActive] = useState(false);
-
-    const handleHover = () => {
-        setIsActive(true);
-    };
-
-    const handleLeave = () => {
-        setIsActive(false);
-    };
+    const { isActive, handleHover, handleLeave } = useTooltipBasic()
 
   return (
     <div className="p-5">
@@ -26,15 +19,15 @@ export const CodeBasicTooltip: React.FC<CodeBasicTooltipProps> = ({active}) => {
             ? 
             <Tooltip addClass='flex justify-center'>
                 <button type="button" 
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleLeave}
+                    onMouseEnter={() => handleHover('basic')}
+                    onMouseLeave={() => handleLeave('basic')}
                     className="font-medium capitalize  
                             flex justify-center rounded-md shadow-sm 
                             duration-200 ease-in-out focus:ring-4
                             text-white bg-primary hover:bg-primary/90 focus:ring-primary/20 min-w-24 px-3 py-2">
                         show tooltip
                 </button>
-                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive}>
+                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive('basic')}>
                     <span className='text-white'>This is awesome tooltip example!</span>
                 </ValueTooltip>
             </Tooltip>

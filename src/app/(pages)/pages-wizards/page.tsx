@@ -31,8 +31,6 @@ const page = () => {
                 </WidgetBtn>
 
                 <WidgetValue>
-
-
                     <div className="flex flex-col gap-4">
                         <div className="text-base font-medium">Profile Settings</div>
                         

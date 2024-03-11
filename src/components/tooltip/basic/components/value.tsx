@@ -14,8 +14,8 @@ export const ValueTooltip: React.FC<ValueTooltipProps> = ({addClass, bgColor, ch
         ${active == false ? "opacity-0 invisible" : "opacity-100 visible"}
         transition-all duration-300 ease-in-out`}
         style={{ backgroundColor: bgColor }}>
-        <div className="absolute top-[80%] left-1/2 rotate-45
-            border-[5px] border-solid"
+        <div className="absolute top-[80%] left-1/2 -translate-x-1/2 rotate-45
+            border-[5px] border-solid rounded-[2px]"
             style={{ borderColor: bgColor}}></div>
         {children}
     </div>
