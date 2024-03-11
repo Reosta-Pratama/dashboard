@@ -71,7 +71,11 @@ export const Blog: React.FC<BlogProps> = ({index, cover, title, desc, categories
                         }
 
                         {/* Edit & Delete */}
-                        <EditDelete index={1} editLink='' deleteLink=''></EditDelete>
+                        <EditDelete 
+                            index={index} 
+                            editLink='' 
+                            deleteLink=''>
+                        </EditDelete>
                     </div>
                 </div>
 
@@ -91,7 +95,10 @@ export const Blog: React.FC<BlogProps> = ({index, cover, title, desc, categories
                         </ul>
 
                         {/* Title */}
-                        <Link href={''} className='text-xl font-medium'>
+                        <Link href={''} 
+                            className='text-xl font-medium
+                            duration-300 ease-linear
+                            hover:text-success'>
                             <h2>{title}</h2>
                         </Link>
                     </div>
@@ -104,7 +111,13 @@ export const Blog: React.FC<BlogProps> = ({index, cover, title, desc, categories
                     {desc}
                 </p>
 
-                <BookShare></BookShare>
+                {/* Bookmark Sharing Download */}
+                <BookShare 
+                    index={index}
+                    bookmarkLink=''
+                    shareLink=''
+                    downloadLink=''>
+                </BookShare>
 
                 <div className="flex flex-col gap-3">
                     <div className="flex justify-between items-center px-5">

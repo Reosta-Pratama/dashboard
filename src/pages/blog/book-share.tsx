@@ -7,7 +7,14 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { FiBookmark, FiShare } from 'react-icons/fi';
 
-export const BookShare = () => {
+interface BookShareProps{
+    index: number;
+    bookmarkLink: string;
+    shareLink: string;
+    downloadLink: string;
+}
+
+export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareLink, downloadLink}) => {
     const { isActive, handleHover, handleLeave } = useTooltipBasic()
 
   return (
@@ -15,9 +22,9 @@ export const BookShare = () => {
         border-y border-solid border-slate-200/60">
         <Tooltip addClass='flex'>
             <Link
-                href={''}
-                onMouseEnter={() => handleHover('bookmark')}
-                onMouseLeave={() => handleLeave('bookmark')}
+                href={bookmarkLink}
+                onMouseEnter={() => handleHover(`bookmart-${index}`)}
+                onMouseLeave={() => handleLeave(`bookmart-${index}`)}
                 className='w-8 h-8 flex justify-center items-center rounded-full
                     bg-white/20 text-slate-500 text-xs
                     border border-solid border-slate-300
@@ -25,7 +32,7 @@ export const BookShare = () => {
                     hover:bg-secondary/70 focus:ring-secondary'>
                 <FiBookmark></FiBookmark>
             </Link>
-            <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive('bookmark')}>
+            <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive(`bookmart-${index}`)}>
                 <span className='text-white capitalize'>bookmark</span>
             </ValueTooltip>
         </Tooltip>
@@ -33,9 +40,9 @@ export const BookShare = () => {
         <div className="flex gap-2">
             <Tooltip addClass='flex'>
                 <Link
-                    href={''}
-                    onMouseEnter={() => handleHover('share')}
-                    onMouseLeave={() => handleLeave('share')}
+                    href={shareLink}
+                    onMouseEnter={() => handleHover(`share-${index}`)}
+                    onMouseLeave={() => handleLeave(`share-${index}`)}
                     className='w-8 h-8 flex justify-center items-center rounded-full
                         bg-secondary text-slate-500 text-xs
                         border border-solid border-slate-300
@@ -43,16 +50,16 @@ export const BookShare = () => {
                         hover:bg-secondary/70 focus:ring-secondary'>
                     <FiShare></FiShare>
                 </Link>
-                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive('share')}>
+                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive(`share-${index}`)}>
                     <span className='text-white capitalize'>share</span>
                 </ValueTooltip>
             </Tooltip>
 
             <Tooltip addClass='flex'>
                 <Link
-                    href={''}
-                    onMouseEnter={() => handleHover('download')}
-                    onMouseLeave={() => handleLeave('download')}
+                    href={downloadLink}
+                    onMouseEnter={() => handleHover(`download-${index}`)}
+                    onMouseLeave={() => handleLeave(`download-${index}`)}
                     className='w-8 h-8 flex justify-center items-center rounded-full
                         bg-primary text-white text-xs
                         border border-solid border-slate-300
@@ -60,7 +67,7 @@ export const BookShare = () => {
                         hover:bg-primary/70 focus:ring-primary'>
                     <FiShare></FiShare>
                 </Link>
-                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive('download')}>
+                <ValueTooltip addClass='px-5 py-2' bgColor='#00293B' active={isActive(`download-${index}`)}>
                     <span className='text-white capitalize'>download PDF</span>
                 </ValueTooltip>
             </Tooltip>

@@ -1,7 +1,5 @@
-import { Grid } from '@/components/grid';
 import Title from '@/components/title/title';
-import { DummyBlog } from '@/dummys/dummy-blog';
-import { Blog } from '@/pages/blog/blog';
+import ContainerBlog from '@/pages/blog/container';
 import { OptionBlog } from '@/pages/blog/option';
 import { Metadata } from 'next';
 import React from 'react'
@@ -23,28 +21,7 @@ const page = () => {
                 </OptionBlog>
             </div>
 
-            <Grid>
-                {
-                    DummyBlog.map((item, index) => (
-                        <Blog
-                            key={index}
-                            index={index}
-                            cover={item.cover}
-                            title={item.title}
-                            desc={item.desc}
-                            categories={item.categories.map(category => category.category)}
-                            authors={[{
-                                createdBy: item.author.createdBy,
-                                photoProfile: item.author.photoProfile,
-                                createdAt: item.author.createdAt
-                            }]}
-                            totalComments={item.totalComments}
-                            totalLikes={item.totalLikes}
-                            totalViews={item.totalViews}>
-                        </Blog>
-                    ))
-                }
-            </Grid>
+            <ContainerBlog></ContainerBlog>
         </main>
     );
 }
