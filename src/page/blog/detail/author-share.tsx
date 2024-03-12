@@ -16,7 +16,8 @@ const AuthorShare: React.FC<AuthorShareProps> = ({addClass, createdBy, photoProf
     const { isActive, handleHover, handleLeave } = useTooltipBasic()
 
   return (
-    <div className='flex justify-between items-center'>
+    <div className='flex justify-between items-center py-5
+        border-y border-solid border-slate-200/60'>
         <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full overflow-hidden">
                 <Image

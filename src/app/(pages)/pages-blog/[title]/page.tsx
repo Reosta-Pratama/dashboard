@@ -2,7 +2,7 @@
 
 import { Card } from '@/components/card/card';
 import { DummyBlog } from '@/dummys/dummy-blog';
-import DetailBlog from '@/page/blog/detailBlog';
+import DetailBlog from '@/page/blog/detail/detailBlog';
 import { useParams } from 'next/navigation';
 import React from 'react';
 
