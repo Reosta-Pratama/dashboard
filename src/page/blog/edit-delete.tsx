@@ -33,13 +33,13 @@ const EditDelete: React.FC<EditDeleteProps> = ({index, editLink, deleteLink}) =>
                     dataOrder={`edit-delete-blog-${index}`}>
                     <ChildDropdownIcon 
                         icon={<FiEdit />}
-                        title='share post' 
+                        title='edit post' 
                         href=''
                         toggleDropdown={() => handleBtnClick(`edit-delete-blog-${index}`)}>
                     </ChildDropdownIcon>
                     <ChildDropdownIcon 
                         icon={<FiTrash />}
-                        title='download post' 
+                        title='delete post' 
                         href=''
                         toggleDropdown={() => handleBtnClick(`edit-delete-blog-${index}`)}>
                     </ChildDropdownIcon>

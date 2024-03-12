@@ -77,8 +77,10 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
                                     src={URL.createObjectURL(file)}
                                     alt={`Input File ${index + 1}`}
                                     loading='lazy'
-                                    width={120}
-                                    height={120}
+                                    layout='responsive'
+                                    objectFit='cover'
+                                    width={100}
+                                    height={100}
                                     className='w-full h-full object-cover object-center
                                         transition-all duration-300 ease-linear
                                         group-hover:scale-110 group-hover:blur-sm'>
