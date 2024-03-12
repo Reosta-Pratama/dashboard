@@ -2,10 +2,11 @@
 
 import { Grid } from '@/components/grid';
 import { DummyBlog } from '@/dummys/dummy-blog';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
 import { BtnPagination } from '@/components/button/pagination/button';
-import Blog from './blog';
+
+const Blog = React.lazy(() => import('./blog'));
 
 const BlogsPerPage = 6
 const PaginationLimit = 5
@@ -56,22 +57,23 @@ const ContainerBlog = () => {
             <Grid>
                 {
                     currentBlogs.map((item, index) => (
-                        <Blog
-                            key={index}
-                            index={index}
-                            cover={item.cover}
-                            title={item.title}
-                            desc={item.desc}
-                            categories={item.categories.map(category => category.category)}
-                            authors={[{
-                                createdBy: item.author.createdBy,
-                                photoProfile: item.author.photoProfile,
-                                createdAt: item.author.createdAt
-                            }]}
-                            totalComments={item.totalComments}
-                            totalLikes={item.totalLikes}
-                            totalViews={item.totalViews}>
-                        </Blog>
+                        <Suspense key={index} fallback={<div>Loading...</div>}>
+                            <Blog
+                                index={index}
+                                cover={item.cover}
+                                title={item.title}
+                                desc={item.desc}
+                                categories={item.categories.map(category => category.category)}
+                                authors={[{
+                                    createdBy: item.author.createdBy,
+                                    photoProfile: item.author.photoProfile,
+                                    createdAt: item.author.createdAt
+                                }]}
+                                totalComments={item.totalComments}
+                                totalLikes={item.totalLikes}
+                                totalViews={item.totalViews}
+                            />
+                        </Suspense>
                     ))
                 }
             </Grid>

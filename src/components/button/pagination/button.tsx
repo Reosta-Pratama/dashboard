@@ -17,7 +17,7 @@ export const BtnPagination: React.FC<BtnPaginationProps> = ({onclick, children, 
             text-center text-slate-800
             transition-all duration-300 ease-in-out
             hover:bg-white hover:border-[#e2e8f0] hover:shadow-card
-            ${active ? "bg-white border-[#e2e8f0]" : "border-transparent"}
+            ${active ? "bg-white border-[#e2e8f0] cursor-no-drop" : "border-transparent"}
             ${addClass ?? ""}`}>
             {children}
     </button>

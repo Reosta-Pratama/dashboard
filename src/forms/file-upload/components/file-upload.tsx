@@ -35,7 +35,7 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
     } = useUploadImage(props);
 
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 cursor-pointer">
             <div className='relative w-full min-h-[150px] flex rounded-md p-5
                     border-2 border-dashed border-black/60'>
                 <div onClick={handleUploadClick} 
@@ -68,11 +68,11 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
                     onChange={handleFileChange}
                 />
 
-                <ul className='relative z-10 flex flex-wrap gap-4'>
+                <ul className='relative z-10 flex flex-wrap gap-4 cursor-auto'>
                     {
                         selectedFiles.map((file, index) => (
                             <li key={index} className='relative group w-[120px] h-[120px] 
-                                rounded-[20px] shadow overflow-hidden'>
+                                rounded-md shadow overflow-hidden'>
                                 <Image 
                                     src={URL.createObjectURL(file)}
                                     alt={`Input File ${index + 1}`}

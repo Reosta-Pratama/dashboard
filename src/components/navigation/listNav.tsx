@@ -98,9 +98,7 @@ const ListNav = () => {
                     droplink={[
                         ['wizards', '/pages-wizards'],
                         ['blog', '/pages-blog'],
-                        ['pricing', '/pages-pricing'],
                         ['invoice', '/pages-invoice'],
-                        ['FAQ', '/pages-faq'],
                         ['login', '/pages-login'],
                         ['register', '/pages-register'],
                         ['error', '/pages-error'],
