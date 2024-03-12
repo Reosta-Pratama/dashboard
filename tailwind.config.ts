@@ -28,7 +28,8 @@ const config: Config = {
                 "desktop": "1200px"
             },
             boxShadow: {
-                'card': '0 3px 5px rgba(0, 0, 0, 0.04)'
+                'card': '0 3px 5px rgba(0, 0, 0, 0.04)',
+                'blogBtn': '0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a'
             },
             colors: {
               'primary': '#1e3a8a',

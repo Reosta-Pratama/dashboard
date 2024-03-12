@@ -90,16 +90,16 @@ const Blog: React.FC<BlogProps> = ({
                     <ul className="w-fit bg-white/20 flex gap-1 rounded px-2 py-1 capitalize">
                         {categories?.map((item, index) => (
                             <React.Fragment key={index}>
-                            <li>{item}</li>
-                            {index < categories.length - 2 && <span>, </span>}
-                            {index === categories.length - 2 && categories.length > 1 && <span> & </span>}
+                                <li>{item}</li>
+                                {index < categories.length - 2 && <span>, </span>}
+                                {index === categories.length - 2 && categories.length > 1 && <span> & </span>}
                             </React.Fragment>
                         ))}
                     </ul>
 
                     {/* Title */}
                     <Link
-                        href={`/pages-blog/${index}`}
+                        href={`/pages-blog/${title}`}
                         className="text-xl font-medium duration-300 ease-linear hover:text-success"
                         >
                         <h2>{title}</h2>
@@ -113,7 +113,13 @@ const Blog: React.FC<BlogProps> = ({
             <p className="text-slate-600 px-5">{desc}</p>
 
             {/* Bookmark Sharing Download */}
-            <BookShare index={index} bookmarkLink="" shareLink="" downloadLink="" />
+            <BookShare 
+                border={true}
+                index={index} 
+                bookmarkLink="" 
+                shareLink="" 
+                downloadLink="" 
+            />
 
             <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center px-5">
@@ -124,7 +130,7 @@ const Blog: React.FC<BlogProps> = ({
                         </span>
                         <span>
                             Views:
-                            <strong className="font-medium"><NumberFormat value={totalComments}></NumberFormat></strong>
+                            <strong className="font-medium"><NumberFormat value={totalViews}></NumberFormat></strong>
                         </span>
                     </div>
 

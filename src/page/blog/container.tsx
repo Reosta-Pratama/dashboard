@@ -58,7 +58,7 @@ const ContainerBlog = () => {
                     currentBlogs.map((item, index) => (
                         <Blog
                             key={index}
-                            index={index + 1}
+                            index={index}
                             cover={item.cover}
                             title={item.title}
                             desc={item.desc}
