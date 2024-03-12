@@ -4,7 +4,7 @@ import { Tooltip } from '@/components/tooltip/basic/components/box'
 import { ValueTooltip } from '@/components/tooltip/basic/components/value';
 import { useTooltipBasic } from '@/components/tooltip/basic/toggle';
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React from 'react'
 import { FiBookmark, FiShare } from 'react-icons/fi';
 
 interface BookShareProps{
@@ -14,7 +14,7 @@ interface BookShareProps{
     downloadLink: string;
 }
 
-export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareLink, downloadLink}) => {
+const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareLink, downloadLink}) => {
     const { isActive, handleHover, handleLeave } = useTooltipBasic()
 
   return (
@@ -22,7 +22,7 @@ export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareL
         border-y border-solid border-slate-200/60">
         <Tooltip addClass='flex'>
             <Link
-                href={bookmarkLink}
+                href={bookmarkLink ?? "#"}
                 onMouseEnter={() => handleHover(`bookmart-${index}`)}
                 onMouseLeave={() => handleLeave(`bookmart-${index}`)}
                 className='w-8 h-8 flex justify-center items-center rounded-full
@@ -40,7 +40,7 @@ export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareL
         <div className="flex gap-2">
             <Tooltip addClass='flex'>
                 <Link
-                    href={shareLink}
+                    href={shareLink ?? "#"}
                     onMouseEnter={() => handleHover(`share-${index}`)}
                     onMouseLeave={() => handleLeave(`share-${index}`)}
                     className='w-8 h-8 flex justify-center items-center rounded-full
@@ -57,7 +57,7 @@ export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareL
 
             <Tooltip addClass='flex'>
                 <Link
-                    href={downloadLink}
+                    href={downloadLink ?? "#"}
                     onMouseEnter={() => handleHover(`download-${index}`)}
                     onMouseLeave={() => handleLeave(`download-${index}`)}
                     className='w-8 h-8 flex justify-center items-center rounded-full
@@ -75,3 +75,5 @@ export const BookShare: React.FC<BookShareProps> = ({index, bookmarkLink, shareL
     </div>  
   )
 }
+
+export default BookShare

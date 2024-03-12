@@ -13,7 +13,7 @@ interface EditDeleteProps{
     deleteLink: string;
 }
 
-export const EditDelete: React.FC<EditDeleteProps> = ({index, editLink, deleteLink}) => {
+const EditDelete: React.FC<EditDeleteProps> = ({index, editLink, deleteLink}) => {
     const { handleBtnClick } = useDropdown()
 
   return (
@@ -48,3 +48,5 @@ export const EditDelete: React.FC<EditDeleteProps> = ({index, editLink, deleteLi
     </div>
   )
 }
+
+export default EditDelete

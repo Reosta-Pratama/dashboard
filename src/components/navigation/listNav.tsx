@@ -93,7 +93,7 @@ const ListNav = () => {
                 <Navigation 
                     name='pages' 
                     href='#' 
-                    currentLink={pathname.startsWith("/pages")}
+                    currentLink={pathname ? pathname.startsWith("/pages") : false}
                     dropdown="yes"
                     droplink={[
                         ['wizards', '/pages-wizards'],
@@ -115,7 +115,7 @@ const ListNav = () => {
                 <Navigation
                     name='components'
                     href='#'
-                    currentLink={pathname.startsWith("/components")}
+                    currentLink={pathname ? pathname.startsWith("/components") : false}
                     dropdown="yes"
                     droplink={[
                         ['accordion', '/components-accordion'],
@@ -137,7 +137,7 @@ const ListNav = () => {
                 <Navigation
                     name='forms'
                     href='#'
-                    currentLink={pathname.startsWith("/forms")}
+                    currentLink={pathname ? pathname.startsWith("/forms") : false}
                     dropdown="yes"
                     droplink={[
                         ['datepicker', '/forms-datepicker'],
@@ -153,7 +153,7 @@ const ListNav = () => {
                 <Navigation
                     name='widgets'
                     href='#'
-                    currentLink={pathname.startsWith("/widgets")}
+                    currentLink={pathname ? pathname.startsWith("/widgets") : false}
                     dropdown="yes"
                     droplink={[
                         ['charts', '/widgets-charts'],

@@ -3,10 +3,9 @@
 import { Grid } from '@/components/grid';
 import { DummyBlog } from '@/dummys/dummy-blog';
 import React, { useState } from 'react';
-import { Blog } from './blog';
-import Link from 'next/link';
 import { FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
 import { BtnPagination } from '@/components/button/pagination/button';
+import Blog from './blog';
 
 const BlogsPerPage = 6
 const PaginationLimit = 5
@@ -57,7 +56,7 @@ const ContainerBlog = () => {
                     currentBlogs.map((item, index) => (
                         <Blog
                             key={index}
-                            index={index}
+                            index={index + 1}
                             cover={item.cover}
                             title={item.title}
                             desc={item.desc}

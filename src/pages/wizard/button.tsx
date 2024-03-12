@@ -8,10 +8,10 @@ interface ButtonProps {
 }
 
 interface WidgetBtnProps {
-    btnWidget: ButtonProps[];
+    btnWidget?: ButtonProps[];
 }
 
-export const WidgetBtn: React.FC<WidgetBtnProps> = ({btnWidget}) => {
+const WidgetBtn: React.FC<WidgetBtnProps> = ({btnWidget = []}) => {
     const [activeIndex, setActiveIndex] = useState(0)
 
     const handleBtnClick = (index: number) => {
@@ -23,7 +23,7 @@ export const WidgetBtn: React.FC<WidgetBtnProps> = ({btnWidget}) => {
             <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-slate-100 w-[69%] h-[3px]"></div>
             <ul className='relative z-[1] flex justify-center px-20'>
                 {
-                    btnWidget.map((item, index) => (
+                    btnWidget?.map((item, index) => (
                         <li key={index}
                             className='flex flex-col flex-1 items-center gap-3'>
                             <button
@@ -48,3 +48,5 @@ export const WidgetBtn: React.FC<WidgetBtnProps> = ({btnWidget}) => {
         </div>
     )
 }
+
+export default WidgetBtn

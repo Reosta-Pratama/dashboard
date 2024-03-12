@@ -2,10 +2,10 @@ import { BtnPrimary } from '@/components/button/basic/style/btn-primary';
 import { BtnSecondary } from '@/components/button/basic/style/btn-secondary';
 import { Card } from '@/components/card/card';
 import Title from '@/components/title/title';
-import { WidgetBtn } from '@/pages/wizard/button';
-import { WidgetValue } from '@/pages/wizard/child';
 import { Input } from '@/forms/regular-form/components/input';
 import { Select } from '@/forms/select/componets/select';
+import WidgetBtn from '@/pages/wizard/button';
+import WidgetValue from '@/pages/wizard/child';
 import { Metadata } from 'next';
 import React from 'react'
 
