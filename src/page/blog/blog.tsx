@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import DateFormat from '@/helpers/convert-date-YMD';
 import EditDelete from './edit-delete';
 import BookShare from './book-share';
 import NumberFormat from '@/helpers/convert-zero';
+import Image from 'next/legacy/image';
 
 interface AuthorProps {
   createdBy: string;
@@ -124,30 +124,35 @@ const Blog: React.FC<BlogProps> = ({
                         </span>
                         <span>
                             Views:
-                            <strong className="font-medium">{totalViews}</strong>
+                            <strong className="font-medium"><NumberFormat value={totalComments}></NumberFormat></strong>
                         </span>
                     </div>
 
                     <span>
                         Likes:
-                        <strong className="font-medium">{totalLikes}</strong>
+                        <strong className="font-medium"><NumberFormat value={totalLikes}></NumberFormat></strong>
                     </span>
                 </div>
 
                 <div className="w-full h-8 flex items-center px-5 gap-3">
-                    <div className="w-8 h-full rounded-full overflow-hidden">
-                        <Image
-                            src="/img/blog/profile-1.jpg"
-                            alt="profile"
-                            loading="lazy"
-                            priority={false}
-                            layout="responsive"
-                            width={100}
-                            height={100}
-                            objectFit="cover"
-                            objectPosition="center"
-                        />
-                    </div>
+                    
+
+                    {authors?.map((item, index) => (
+                        <div key={index}
+                            className="w-8 h-full rounded-full overflow-hidden">
+                            <Image
+                                src={item.photoProfile}
+                                alt={item.createdAt}
+                                loading="lazy"
+                                priority={false}
+                                layout="responsive"
+                                width={100}
+                                height={100}
+                                objectFit="cover"
+                                objectPosition="center"
+                            />
+                        </div>
+                    ))}
 
                     <input
                         id="comment"

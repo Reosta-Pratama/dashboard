@@ -49,6 +49,8 @@ const ContainerBlog = () => {
         return Array.from({ length: end - start + 1 }, (_, i) => start + i)
     }
 
+    const lastIndex = Math.ceil(DummyBlog.length / BlogsPerPage)
+
     return (
         <>
             <Grid>
@@ -86,11 +88,20 @@ const ContainerBlog = () => {
                         </BtnPagination>
                     </li>
                     <li>
-                        <BtnPagination
-                            onclick={() => paginate(currentPage - 1)}
-                            addClass='text-base'>
-                            <FiChevronLeft />
-                        </BtnPagination>
+                        {
+                            currentPage === 1 
+                            ? <BtnPagination
+                                onclick={() => paginate(1)}
+                                addClass='text-base'
+                                active={currentPage == 1}>
+                                <FiChevronLeft />
+                            </BtnPagination>
+                            : <BtnPagination
+                                onclick={() => paginate(currentPage - 1)}
+                                addClass='text-base'>
+                                <FiChevronLeft />
+                            </BtnPagination>
+                        }
                     </li>
 
                     {/* Number */}
@@ -105,16 +116,27 @@ const ContainerBlog = () => {
                     ))}
 
                     {/* Right */}
+
                     <li>
-                        <BtnPagination
-                            onclick={() => paginate(currentPage + 1)}
-                            addClass='text-base'>
-                            <FiChevronRight />
-                        </BtnPagination>
+                        {
+                            currentPage === lastIndex 
+                            ? <BtnPagination
+                                onclick={() => paginate(lastIndex)}
+                                addClass='text-base'
+                                active={currentPage == lastIndex}>
+                                <FiChevronRight />
+                            </BtnPagination>
+                            : <BtnPagination
+                                onclick={() => paginate(currentPage + 1)}
+                                addClass='text-base'>
+                                <FiChevronRight />
+                            </BtnPagination>
+                        }
                     </li>
+
                     <li>
                         <BtnPagination
-                             onclick={() => paginate(Math.ceil(DummyBlog.length / BlogsPerPage))}
+                             onclick={() => paginate(lastIndex)}
                              addClass='text-base'>
                             <FiChevronsRight />
                         </BtnPagination>

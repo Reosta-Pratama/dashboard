@@ -1,6 +1,6 @@
 "use client"
 
-import DetailBlog from '@/pages/blog/detailBlog';
+import DetailBlog from '@/page/blog/detailBlog';
 import { useParams } from 'next/navigation';
 import React from 'react';
 

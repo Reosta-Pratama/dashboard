@@ -4,8 +4,8 @@ import { Card } from '@/components/card/card';
 import Title from '@/components/title/title';
 import { Input } from '@/forms/regular-form/components/input';
 import { Select } from '@/forms/select/componets/select';
-import WidgetBtn from '@/pages/wizard/button';
-import WidgetValue from '@/pages/wizard/child';
+import WidgetBtn from '@/page/wizard/button';
+import WidgetValue from '@/page/wizard/child';
 import { Metadata } from 'next';
 import React from 'react'
 

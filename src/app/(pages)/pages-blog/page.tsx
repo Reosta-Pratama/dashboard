@@ -1,6 +1,6 @@
 import Title from '@/components/title/title';
-import ContainerBlog from '@/pages/blog/container';
-import OptionBlog from '@/pages/blog/option';
+import ContainerBlog from '@/page/blog/container';
+import OptionBlog from '@/page/blog/option';
 import { Metadata } from 'next';
 import React from 'react'
 
